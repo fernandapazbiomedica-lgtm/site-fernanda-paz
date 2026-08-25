@@ -6,7 +6,7 @@ import { AntesDepois } from '@/components/AntesDepois';
 import { Reels } from '@/components/Reels';
 import { CASOS_GALERIA } from '@/lib/imagens';
 import { Foto } from '@/components/Foto';
-import { HeroFotos } from '@/components/HeroFotos';
+import { HeroReel } from '@/components/HeroReel';
 import { ARTIGOS } from '@/lib/blog';
 import { REVISADO } from '@/lib/revisao';
 
@@ -59,15 +59,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* vídeo ou foto — sangra à direita */}
+          {/* reels — o trabalho acontecendo, sangra à direita */}
           <div className="relative lg:-mr-10 xl:-mr-20">
-            <HeroFotos
-              className="aspect-[3/4] w-full"
-              fotos={[
-                { src: '/images/dra-retrato-alt.jpg', alt: 'Dra. Fernanda Paz, biomédica esteta, no Guarujá' },
-                { src: '/images/hero-consultorio.jpg', alt: 'Consultório da Dra. Fernanda Paz no Guarujá' },
-              ]}
-            />
+            <HeroReel className="aspect-[3/4] w-full" />
           </div>
         </div>
       </section>

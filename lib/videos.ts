@@ -18,13 +18,13 @@ export type Reel = {
 
 export const REELS: Reel[] = [
   {
-    arquivo: 'reel-preenchimento-labial',
-    titulo: 'Preenchimento labial',
+    arquivo: 'reel-harmonizacao-facial',
+    titulo: 'Harmonização facial',
     categoria: 'facial',
   },
   {
-    arquivo: 'reel-harmonizacao-facial',
-    titulo: 'Harmonização facial',
+    arquivo: 'reel-preenchimento-labial',
+    titulo: 'Preenchimento labial',
     categoria: 'facial',
   },
   {
