@@ -92,12 +92,7 @@ export default async function ArtigoPage({ params }: Props) {
         </header>
 
         <Foto
-          src={
-            a.categoria === 'Facial' ? '/images/cat-facial.jpg'
-            : a.categoria === 'Corporal' ? '/images/cat-corporal.jpg'
-            : a.categoria === 'Capilar' ? '/images/cat-capilar.jpg'
-            : '/images/cat-pele.jpg'
-          }
+          src={a.imagem}
           alt={a.titulo}
           className="h-[220px] md:h-[300px] w-full"
           prioridade

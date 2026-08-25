@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import { CATEGORIAS } from '@/lib/procedimentos';
 import { Reveal, CtaFaixa, Trilha, AvisoResultados } from '@/components/ui';
-import { Foto } from '@/components/Foto';
-import { GALERIA } from '@/lib/imagens';
+import { AntesDepois } from '@/components/AntesDepois';
+import { Reels } from '@/components/Reels';
+import { CASOS_GALERIA } from '@/lib/imagens';
 import { SITE, MSG } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -46,20 +47,25 @@ export default function Resultados() {
 
       <section className="wrap py-20 md:py-24">
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-x-6 gap-y-14">
-          {GALERIA.map((c, i) => (
-            <Reveal key={c.arquivo} delay={(i % 3) * 80}>
+          {CASOS_GALERIA.map((c, i) => (
+            <Reveal key={`${c.nome}-${i}`} delay={(i % 3) * 80}>
               <div className={i % 3 === 1 ? 'lg:mt-10' : ''}>
-                <Foto
-                  src={`/images/resultados/${c.arquivo}.jpg`}
-                  alt={`Antes e depois: ${c.nome}, no Guarujá`}
-                  className="aspect-[4/5] w-full"
-                  modo="contain"
-                  claro
-                />
-                <h2 className="display text-[21px] mt-5">{c.nome}</h2>
+                <AntesDepois caso={c} className="aspect-[4/5] w-full" />
               </div>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-20 border-t border-linha pt-16">
+          <p className="eyebrow text-roxo">Em movimento</p>
+          <h2 className="display text-d2 mt-5 mb-3">
+            O procedimento <em className="italic">acontecendo</em>
+          </h2>
+          <p className="text-tinta-2 text-[17px] max-w-medida mb-10">
+            Foto parada mostra o resultado. O vídeo mostra a técnica, o cuidado e o tempo que cada
+            etapa leva.
+          </p>
+          <Reels />
         </div>
 
         <div className="mt-16 border-t border-linha pt-8">

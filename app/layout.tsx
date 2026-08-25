@@ -3,16 +3,16 @@ import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { BarraWhatsApp } from '@/components/ui';
-import { SITE } from '@/lib/site';
+import { SITE , PERFIS } from '@/lib/site';
 
 /**
  * Fontes via <link> do Google Fonts.
  * Para self-host (elimina requisição externa e CLS), troque por next/font/google:
- *   import { Bodoni_Moda, Manrope, Sacramento } from 'next/font/google'
+ *   import { Playfair_Display, Manrope, Sacramento } from 'next/font/google'
  * e aplique as variáveis no <html>. Ver DESIGN_SYSTEM.md.
  */
 const FONTS =
-  'https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Manrope:wght@300;400;500;600;700&family=Sacramento&display=swap';
+  'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Manrope:wght@300;400;500;600;700&family=Sacramento&display=swap';
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -55,7 +55,7 @@ const schema = {
     addressRegion: SITE.uf,
     addressCountry: 'BR',
   },
-  sameAs: [SITE.instagram.url],
+  sameAs: PERFIS,
   employee: {
     '@type': 'Person',
     name: SITE.nome,

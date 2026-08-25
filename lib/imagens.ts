@@ -1,12 +1,19 @@
+import type { Caso } from '@/components/AntesDepois';
+
 /**
  * Mapa de imagens por procedimento.
  *
- * Cada página de procedimento pede uma imagem própria. Onde existe antes/depois
- * limpo, é ele. Onde não existe, cai na macro da categoria — que é textura de
- * pele real, não banco de imagem.
+ * A unidade aqui é o CASO, não o arquivo. Um caso de preenchimento labial com
+ * foto de antes e foto de depois é uma entrada só — o componente AntesDepois
+ * monta as duas na mesma moldura com a alça de arrastar. Duas fotos do mesmo
+ * caso nunca viram dois cards soltos na grade.
  *
- * `casos` lista os antes/depois disponíveis para aquele procedimento. Página sem
- * caso não renderiza a seção de resultados, em vez de mostrar placeholder.
+ * Dois formatos de caso:
+ *   { antes, depois }  — arquivos separados, mesmo enquadramento → comparador
+ *   { composto }       — antes/depois já montados num arquivo → imagem inteira
+ *
+ * Página sem caso não renderiza a seção de resultados, em vez de mostrar
+ * placeholder.
  */
 
 const MACRO: Record<string, string> = {
@@ -18,43 +25,82 @@ const MACRO: Record<string, string> = {
   'bem-estar': '/images/cat-bem-estar.jpg',
 };
 
-/** antes/depois com autorização e sem marca de rede social */
-export const CASOS: Record<string, string[]> = {
-  'preenchimento-labial': ['preenchimento-labial', 'preenchimento-labial-1-antes', 'preenchimento-labial-1-depois'],
-  'toxina-botulinica': ['toxina-botulinica'],
-  'cicatrizes-de-acne': ['cicatrizes-de-acne'],
-  'intradermoterapia-capilar': ['intradermoterapia-capilar', 'intradermoterapia-capilar-2'],
-  'microagulhamento-capilar': ['intradermoterapia-capilar-2'],
-  'queda-capilar': ['intradermoterapia-capilar', 'intradermoterapia-capilar-2'],
-  'calvicie-inicial': ['intradermoterapia-capilar'],
-  alopecias: ['intradermoterapia-capilar-2'],
-  gluteo: ['preenchimento-gluteo'],
-  rejuvenescimento: ['rejuvenescimento-maos', 'rejuvenescimento-maos-2'],
-  manchas: ['rejuvenescimento-maos-2'],
+/** todos os casos com autorização de uso, na ordem em que aparecem na galeria */
+export const CASOS_GALERIA: Caso[] = [
+  {
+    nome: 'Preenchimento labial',
+    categoria: 'facial',
+    antes: 'preenchimento-labial-1-antes',
+    depois: 'preenchimento-labial-1-depois',
+  },
+  {
+    nome: 'Preenchimento labial',
+    categoria: 'facial',
+    antes: 'preenchimento-labial-2-antes',
+    depois: 'preenchimento-labial-2-depois',
+  },
+  { nome: 'Harmonização facial', categoria: 'facial', composto: 'harmonizacao-facial' },
+  { nome: 'Perfiloplastia', categoria: 'facial', composto: 'harmonizacao-facial-2' },
+  {
+    nome: 'Toxina botulínica com fios de PDO',
+    categoria: 'facial',
+    composto: 'toxina-fios-pdo',
+  },
+  { nome: 'Toxina botulínica', categoria: 'facial', composto: 'toxina-fios-pdo-2' },
+  { nome: 'Toxina botulínica', categoria: 'facial', composto: 'toxina-botulinica' },
+  { nome: 'Rinomodelação', categoria: 'facial', composto: 'rinomodelacao' },
+  { nome: 'Cicatrizes de acne', categoria: 'facial', composto: 'cicatrizes-de-acne' },
+  { nome: 'Lipo enzimática', categoria: 'corporal', composto: 'lipo-enzimatica' },
+  { nome: 'Preenchimento de glúteo', categoria: 'corporal', composto: 'preenchimento-gluteo' },
+  { nome: 'Preenchimento de glúteo', categoria: 'corporal', composto: 'preenchimento-gluteo-2' },
+  { nome: 'Estrias', categoria: 'pele', composto: 'estrias' },
+  { nome: 'Estrias e flacidez', categoria: 'pele', composto: 'estrias-flacidez' },
+  { nome: 'Rejuvenescimento de mãos', categoria: 'pele', composto: 'rejuvenescimento-maos' },
+  { nome: 'Rejuvenescimento de mãos', categoria: 'pele', composto: 'rejuvenescimento-maos-2' },
+  {
+    nome: 'Intradermoterapia capilar',
+    categoria: 'capilar',
+    composto: 'intradermoterapia-capilar',
+  },
+  {
+    nome: 'Intradermoterapia capilar',
+    categoria: 'capilar',
+    composto: 'intradermoterapia-capilar-2',
+  },
+];
+
+/** quais casos da galeria aparecem em cada procedimento, por índice */
+const POR_PROCEDIMENTO: Record<string, number[]> = {
+  'preenchimento-labial': [0, 1],
+  'harmonizacao-facial': [2, 3, 0],
+  perfiloplastia: [3, 2],
+  rinomodelacao: [7, 3],
+  'toxina-botulinica': [4, 5, 6],
+  'fios-de-pdo': [4, 5],
+  'cicatrizes-de-acne': [8],
+  'lipo-enzimatica': [9],
+  gluteo: [10, 11],
+  'preenchimento-de-gluteo': [10, 11],
+  estrias: [12, 13],
+  flacidez: [13, 12],
+  rejuvenescimento: [14, 15],
+  manchas: [15],
+  'intradermoterapia-capilar': [16, 17],
+  'microagulhamento-capilar': [17],
+  'queda-capilar': [16, 17],
+  'calvicie-inicial': [16],
+  alopecias: [17],
 };
+
+/** casos daquele procedimento, prontos para o componente AntesDepois */
+export function casosDoProcedimento(slug: string): Caso[] {
+  return (POR_PROCEDIMENTO[slug] ?? []).map((i) => CASOS_GALERIA[i]).filter(Boolean);
+}
 
 /** imagem de abertura da página do procedimento */
 export function imagemProcedimento(slug: string, categoria: string): string {
-  const caso = CASOS[slug]?.[0];
-  if (caso) return `/images/resultados/${caso}.jpg`;
+  const caso = casosDoProcedimento(slug)[0];
+  const arquivo = caso?.composto ?? caso?.depois;
+  if (arquivo) return `/images/resultados/${arquivo}.jpg`;
   return MACRO[categoria] ?? MACRO.facial;
 }
-
-/** caminhos completos dos casos daquele procedimento */
-export function casosDoProcedimento(slug: string): string[] {
-  return (CASOS[slug] ?? []).map((c) => `/images/resultados/${c}.jpg`);
-}
-
-/** todos os casos, para a página /resultados */
-export const GALERIA: { arquivo: string; nome: string; categoria: string }[] = [
-  { arquivo: 'preenchimento-labial', nome: 'Preenchimento labial', categoria: 'facial' },
-  { arquivo: 'preenchimento-labial-1-antes', nome: 'Preenchimento labial — antes', categoria: 'facial' },
-  { arquivo: 'preenchimento-labial-1-depois', nome: 'Preenchimento labial — depois', categoria: 'facial' },
-  { arquivo: 'toxina-botulinica', nome: 'Toxina botulínica', categoria: 'facial' },
-  { arquivo: 'cicatrizes-de-acne', nome: 'Cicatrizes de acne', categoria: 'facial' },
-  { arquivo: 'rejuvenescimento-maos', nome: 'Rejuvenescimento de mãos', categoria: 'pele' },
-  { arquivo: 'rejuvenescimento-maos-2', nome: 'Rejuvenescimento de mãos', categoria: 'pele' },
-  { arquivo: 'intradermoterapia-capilar', nome: 'Intradermoterapia capilar', categoria: 'capilar' },
-  { arquivo: 'intradermoterapia-capilar-2', nome: 'Intradermoterapia capilar', categoria: 'capilar' },
-  { arquivo: 'preenchimento-gluteo', nome: 'Preenchimento de glúteo', categoria: 'corporal' },
-];

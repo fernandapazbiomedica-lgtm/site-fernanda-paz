@@ -33,7 +33,7 @@
 @layer components {
   /* ——— tipografia ——— */
   .display {
-    @apply font-display font-normal;
+    @apply font-display font-medium;
     text-wrap: balance;
   }
   .eyebrow {
@@ -131,7 +131,7 @@
 
 /* variáveis de fonte — definidas aqui porque as famílias vêm por <link> */
 :root {
-  --font-display: 'Bodoni Moda';
+  --font-display: 'Playfair Display';
   --font-sans: 'Manrope';
   --font-script: 'Sacramento';
 }

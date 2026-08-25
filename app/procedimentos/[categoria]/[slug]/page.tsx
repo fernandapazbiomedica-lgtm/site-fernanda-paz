@@ -10,6 +10,7 @@ import {
 import { Reveal, Pendente, CtaFaixa, Trilha, AvisoResultados } from '@/components/ui';
 import { Foto } from '@/components/Foto';
 import { imagemProcedimento, casosDoProcedimento } from '@/lib/imagens';
+import { AntesDepois } from '@/components/AntesDepois';
 import { SITE, wa, MSG } from '@/lib/site';
 import { REVISADO } from '@/lib/revisao';
 
@@ -206,16 +207,9 @@ export default async function ProcedimentoPage({ params }: Props) {
               Ver galeria completa
             </Link>
           </div>
-          <div className="grid sm:grid-cols-3 gap-5">
-            {casosDoProcedimento(p.slug).map((src) => (
-              <Foto
-                key={src}
-                src={src}
-                alt={`Antes e depois: ${p.nome}`}
-                className="aspect-[4/5]"
-                modo="contain"
-                claro
-              />
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {casosDoProcedimento(p.slug).map((caso, i) => (
+              <AntesDepois key={`${caso.nome}-${i}`} caso={caso} claro className="aspect-[4/5]" />
             ))}
           </div>
           <div className="mt-8">

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Pendente, CtaFaixa, Trilha } from '@/components/ui';
 import { Foto } from '@/components/Foto';
-import { SITE, wa, MSG } from '@/lib/site';
+import { SITE, wa, MSG , REDES } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Contato e Localização',
@@ -58,9 +58,15 @@ export default function Contato() {
               <div className="py-6 border-t border-b border-linha">
                 <dt className="rotulo text-tinta-3">Redes</dt>
                 <dd className="mt-2">
-                  <a href={SITE.instagram.url} target="_blank" rel="noopener" className="text-[17px] text-roxo">
-                    {SITE.instagram.handle}
-                  </a>
+                  <ul className="space-y-2">
+                    {REDES.map((r) => (
+                      <li key={r.nome}>
+                        <a href={r.url} target="_blank" rel="noopener" className="text-[17px] text-roxo">
+                          {r.nome === 'Google' ? r.handle : `${r.nome} · ${r.handle}`}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
                 </dd>
               </div>
             </dl>

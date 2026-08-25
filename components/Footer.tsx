@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { CATEGORIAS, porCategoria } from '@/lib/procedimentos';
-import { SITE, wa, MSG } from '@/lib/site';
+import { SITE, wa, MSG , REDES } from '@/lib/site';
 
 export default function Footer() {
   return (
@@ -21,10 +21,18 @@ export default function Footer() {
             <a href={wa(MSG.geral)} target="_blank" rel="noopener" className="btn mt-8 bg-white text-ameixa hover:bg-malva">
               WhatsApp {SITE.whatsapp.exibicao}
             </a>
-            <div className="mt-8 flex gap-6">
-              <a href={SITE.instagram.url} target="_blank" rel="noopener" className="rotulo text-white/60 hover:text-white transition-colors">
-                Instagram
-              </a>
+            <div className="mt-8 flex flex-wrap gap-x-6 gap-y-3">
+              {REDES.map((r) => (
+                <a
+                  key={r.nome}
+                  href={r.url}
+                  target="_blank"
+                  rel="noopener"
+                  className="rotulo text-white/60 hover:text-white transition-colors"
+                >
+                  {r.nome}
+                </a>
+              ))}
               <Link href="/contato" className="rotulo text-white/60 hover:text-white transition-colors">
                 Como chegar
               </Link>

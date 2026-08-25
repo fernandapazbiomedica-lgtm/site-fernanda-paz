@@ -2,6 +2,9 @@ import Link from 'next/link';
 import { CATEGORIAS, porCategoria } from '@/lib/procedimentos';
 import { SITE, wa, MSG } from '@/lib/site';
 import { Reveal, Pendente, Media, CtaFaixa, TextoArco, AvisoResultados } from '@/components/ui';
+import { AntesDepois } from '@/components/AntesDepois';
+import { Reels } from '@/components/Reels';
+import { CASOS_GALERIA } from '@/lib/imagens';
 import { Foto } from '@/components/Foto';
 import { HeroFotos } from '@/components/HeroFotos';
 import { ARTIGOS } from '@/lib/blog';
@@ -251,26 +254,25 @@ export default function Home() {
             </Link>
           </div>
 
-          <div className="trilho flex gap-5 overflow-x-auto pb-6 -mx-6 px-6 md:mx-0 md:px-0 snap-x">
-            {[
-              ['Toxina botulínica', 'toxina-botulinica'],
-              ['Intradermoterapia capilar', 'intradermoterapia-capilar'],
-              ['Cicatrizes de acne', 'cicatrizes-de-acne'],
-              ['Rejuvenescimento de mãos', 'rejuvenescimento-maos'],
-              ['Preenchimento de glúteo', 'preenchimento-gluteo'],
-              ['Intradermoterapia capilar', 'intradermoterapia-capilar-2'],
-            ].map(([nome, arquivo]) => (
-              <div key={arquivo} className="shrink-0 w-[240px] md:w-[280px] snap-start">
-                <Foto
-                  src={`/images/resultados/${arquivo}.jpg`}
-                  alt={`Antes e depois: ${nome}`}
-                  className="aspect-[4/5] w-full"
-                  modo="contain"
-                  claro
-                />
-                <p className="rotulo text-white mt-4">{nome}</p>
+          <div className="trilho flex gap-6 overflow-x-auto pb-6 -mx-6 px-6 md:mx-0 md:px-0 snap-x">
+            {CASOS_GALERIA.slice(0, 6).map((caso, i) => (
+              <div key={`${caso.nome}-${i}`} className="shrink-0 w-[248px] md:w-[290px] snap-start">
+                <AntesDepois caso={caso} claro className="aspect-[4/5] w-full" />
               </div>
             ))}
+          </div>
+
+          {/* reels — o material mais forte da clínica */}
+          <div className="mt-20 pt-16 border-t border-white/10">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+              <div>
+                <p className="eyebrow text-malva">Em movimento</p>
+                <h2 className="display text-d2 text-white mt-4">
+                  O procedimento <em className="italic">acontecendo</em>.
+                </h2>
+              </div>
+            </div>
+            <Reels claro />
           </div>
 
           <div className="mt-10">

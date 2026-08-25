@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Foto } from '@/components/Foto';
 import { Reveal, Pendente, CtaFaixa, Trilha } from '@/components/ui';
-import { SITE, MSG } from '@/lib/site';
+import { SITE, MSG , PERFIS } from '@/lib/site';
 import { REVISADO } from '@/lib/revisao';
 
 export const metadata: Metadata = {
@@ -18,7 +18,7 @@ const schema = {
   jobTitle: SITE.papel,
   identifier: SITE.crbm,
   url: `${SITE.url}/sobre`,
-  sameAs: [SITE.instagram.url],
+  sameAs: PERFIS,
   workLocation: { '@type': 'Place', name: `${SITE.cidade}, ${SITE.uf}` },
 };
 
