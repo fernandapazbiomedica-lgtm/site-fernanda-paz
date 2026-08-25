@@ -22,7 +22,7 @@ export const ARTIGOS: Artigo[] = [
       'A resposta curta é não, e a resposta longa explica exatamente por que algumas pessoas ficam com essa aparência.',
     leitura: '4 min',
     data: '2026-08-21',
-    imagem: '/images/resultados/toxina-fios-pdo.jpg',
+    imagem: '/images/cat-facial.jpg',
     corpo: [
       {
         tipo: 'p',
@@ -162,7 +162,7 @@ export const ARTIGOS: Artigo[] = [
       'Os nomes são parecidos, o resultado esperado é parecido, mas as indicações são quase opostas.',
     leitura: '4 min',
     data: '2026-08-07',
-    imagem: '/images/resultados/lipo-enzimatica.jpg',
+    imagem: '/images/cat-corporal.jpg',
     corpo: [
       {
         tipo: 'p',
@@ -222,7 +222,7 @@ export const ARTIGOS: Artigo[] = [
       'A resposta varia de 8 a 18 meses, e o que decide onde você cai nessa faixa não é a marca do produto.',
     leitura: '5 min',
     data: '2026-08-24',
-    imagem: '/images/resultados/preenchimento-labial-1-depois.jpg',
+    imagem: '/images/blog/labios-detalhe.jpg',
     corpo: [
       {
         tipo: 'p',
@@ -286,7 +286,7 @@ export const ARTIGOS: Artigo[] = [
       'É um plano. E entender essa diferença é o que separa um resultado natural de um rosto que virou meme.',
     leitura: '6 min',
     data: '2026-08-18',
-    imagem: '/images/resultados/harmonizacao-facial.jpg',
+    imagem: '/images/blog/perfil-facial.jpg',
     corpo: [
       {
         tipo: 'p',
@@ -356,7 +356,7 @@ export const ARTIGOS: Artigo[] = [
       'Ela não é lipoaspiração sem corte, e tratar as duas como equivalentes é a origem de quase toda frustração.',
     leitura: '5 min',
     data: '2026-08-11',
-    imagem: '/images/resultados/lipo-enzimatica.jpg',
+    imagem: '/images/cat-bem-estar.jpg',
     corpo: [
       {
         tipo: 'p',
@@ -425,7 +425,7 @@ export const ARTIGOS: Artigo[] = [
       'Perder fio todo dia é esperado. O que muda o jogo é perceber o momento em que deixou de ser.',
     leitura: '5 min',
     data: '2026-08-04',
-    imagem: '/images/resultados/intradermoterapia-capilar.jpg',
+    imagem: '/images/cat-capilar.jpg',
     corpo: [
       {
         tipo: 'p',
@@ -486,7 +486,503 @@ export const ARTIGOS: Artigo[] = [
         'Perder de 50 a 100 fios por dia é normal. Entenda os sinais de que a queda passou do esperado, por que a causa precisa ser investigada e o que o tratamento capilar oferece.',
     },
   },
+  {
+    slug: 'quando-comecar-tratamentos-para-o-verao',
+    titulo: 'Quer estar pronta no verão? A conta começa agora',
+    categoria: 'Corporal',
+    resumo:
+      'Quase todo tratamento que muda alguma coisa de verdade leva meses. Novembro é tarde para começar.',
+    leitura: '6 min',
+    data: '2026-08-25',
+    imagem: '/images/cat-corporal.jpg',
+    corpo: [
+      {
+        tipo: 'p',
+        texto:
+          'Todo ano acontece a mesma coisa: a procura dispara em novembro, quando a viagem já está marcada. E aí boa parte do que a pessoa quer simplesmente não cabe no tempo que sobrou — não porque o procedimento seja ruim, mas porque o corpo tem um ritmo próprio de resposta que ninguém acelera.',
+      },
+      { tipo: 'h2', texto: 'O tempo real de cada frente' },
+      {
+        tipo: 'lista',
+        itens: [
+          'Bioestimulador de colágeno: o resultado se constrói ao longo de 3 a 6 meses, porque quem produz o colágeno é o seu organismo',
+          'Protocolo para estrias e flacidez: sessões seriadas, geralmente ao longo de 3 a 4 meses',
+          'Lipo enzimática: protocolo com intervalo entre as sessões, tipicamente 2 a 3 meses até fechar',
+          'Tratamento capilar: os primeiros sinais aparecem por volta de 3 meses, porque o cabelo cresce no ritmo dele',
+          'Toxina botulínica: efeito pleno em cerca de 15 dias — essa sim cabe em cima da hora',
+          'Preenchimento: resultado imediato, mas com inchaço nos primeiros dias, então não se faz na véspera de evento',
+        ],
+      },
+      {
+        tipo: 'destaque',
+        texto:
+          'Fim de agosto é o último mês confortável para quem quer resultado consolidado em dezembro.',
+      },
+      { tipo: 'h2', texto: 'Por que o inverno é a estação certa para pele' },
+      {
+        tipo: 'p',
+        texto:
+          'Peelings, lasers e procedimentos que renovam a pele deixam ela temporariamente mais sensível ao sol, e sol em pele em recuperação é o caminho mais curto para mancha. Por isso esses tratamentos se concentram nos meses de sol mais fraco — e a janela vai fechando conforme a primavera chega.',
+      },
+      {
+        tipo: 'p',
+        texto:
+          'Aqui no litoral esse ponto pesa mais do que em cidade de interior: mesmo em dia nublado, a reverberação da areia e da água aumenta bastante a exposição. Quem mora ou passa o fim de semana na praia precisa antecipar mais do que a média.',
+      },
+      { tipo: 'h2', texto: 'Fazer tudo de uma vez não compensa o atraso' },
+      {
+        tipo: 'p',
+        texto:
+          'A tentação de empilhar procedimentos para recuperar o tempo perdido costuma sair pior: alguns não podem ser feitos na mesma região em sequência curta, e outros precisam do resultado do anterior estabilizado para serem avaliados corretamente. Chegar tarde e acelerar não devolve os meses — só aumenta o risco.',
+      },
+      {
+        tipo: 'p',
+        texto:
+          'A conversa mais honesta que existe nessa época é dizer o que dá e o que não dá no tempo disponível, e montar o plano a partir daí.',
+      },
+    ],
+    faq: [
+      {
+        p: 'Quando devo começar os tratamentos para o verão?',
+        r: 'Depende do procedimento. Bioestimulador pede de 3 a 6 meses, protocolos corporais para estrias e flacidez de 3 a 4 meses, lipo enzimática de 2 a 3 meses. Toxina botulínica tem efeito pleno em cerca de 15 dias. Para resultado consolidado em dezembro, agosto e setembro são os meses de começar.',
+      },
+      {
+        p: 'Posso fazer peeling perto do verão?',
+        r: 'Procedimentos que renovam a pele a deixam temporariamente mais sensível ao sol, o que aumenta o risco de mancha. Por isso são concentrados nos meses de sol mais fraco. Em cidade litorânea a antecipação precisa ser ainda maior, pela reverberação da areia e da água.',
+      },
+      {
+        p: 'Dá para acelerar fazendo vários procedimentos juntos?',
+        r: 'Não com segurança. Alguns procedimentos não podem ser feitos na mesma região em sequência curta e outros exigem que o resultado do anterior esteja estabilizado para serem avaliados. Empilhar tratamentos para recuperar tempo aumenta risco sem devolver os meses.',
+      },
+    ],
+    seo: {
+      title: 'Quando começar os tratamentos estéticos para o verão | Guarujá',
+      description:
+        'Bioestimulador leva de 3 a 6 meses, protocolos corporais de 3 a 4. Veja o tempo real de cada tratamento e quando começar para estar pronta no verão. Guarujá, SP.',
+    },
+  },
+  {
+    slug: 'preenchimento-e-sol-pode-ir-para-a-praia',
+    titulo: 'Fiz preenchimento. Posso ir para a praia?',
+    categoria: 'Facial',
+    resumo:
+      'A pergunta de quem mora no litoral. A resposta tem prazo, e tem um detalhe sobre calor que quase ninguém comenta.',
+    leitura: '4 min',
+    data: '2026-08-23',
+    imagem: '/images/blog/labios-detalhe.jpg',
+    corpo: [
+      {
+        tipo: 'p',
+        texto:
+          'Em cidade de praia essa dúvida aparece em quase toda consulta, e ela é legítima: não adianta orientar como se a pessoa morasse longe do mar e fosse ver sol só nas férias.',
+      },
+      { tipo: 'h2', texto: 'Os primeiros dias' },
+      {
+        tipo: 'p',
+        texto:
+          'Logo após o preenchimento a região está com edema e com pequenos pontos de entrada da agulha ou cânula ainda cicatrizando. Sol forte nesse momento favorece inchaço e, na pele com tendência a manchar, aumenta o risco de hiperpigmentação justamente onde houve trauma.',
+      },
+      {
+        tipo: 'lista',
+        itens: [
+          'Evitar exposição solar direta e prolongada nos primeiros dias',
+          'Evitar mar e piscina enquanto os pontos de entrada não estiverem fechados, pela questão de contaminação',
+          'Protetor solar sempre, reaplicado — e isso vale para o ano inteiro, não só no pós',
+          'Nada de esfregar, massagear ou apoiar a região com força',
+        ],
+      },
+      {
+        tipo: 'destaque',
+        texto:
+          'Calor intenso é diferente de sol. Sauna, banho muito quente e exposição prolongada ao calor aumentam o edema nos primeiros dias.',
+      },
+      { tipo: 'h2', texto: 'Sol degrada o preenchimento?' },
+      {
+        tipo: 'p',
+        texto:
+          'Não da forma dramática que circula por aí, mas o sol crônico e sem proteção acelera a degradação do ácido hialurônico e, principalmente, envelhece a pele ao redor. O produto até pode estar lá, e o conjunto parecer pior — porque a qualidade da pele caiu.',
+      },
+      { tipo: 'h2', texto: 'O prazo depende do caso' },
+      {
+        tipo: 'p',
+        texto:
+          'Quantidade aplicada, região tratada, se houve hematoma e o seu tipo de pele mudam a orientação. Por isso o prazo exato vem de quem aplicou, e vale mais do que qualquer regra geral de internet — inclusive esta.',
+      },
+    ],
+    faq: [
+      {
+        p: 'Posso tomar sol depois de fazer preenchimento?',
+        r: 'A exposição solar direta e prolongada deve ser evitada nos primeiros dias, enquanto há edema e os pontos de entrada estão cicatrizando, pelo risco de aumentar o inchaço e de manchar a região. O prazo exato é dado por quem aplicou, conforme a região e a quantidade.',
+      },
+      {
+        p: 'Posso entrar no mar ou na piscina depois do preenchimento?',
+        r: 'Não enquanto os pontos de entrada da agulha ou cânula não estiverem fechados, pela questão de contaminação. Esse prazo é orientado no pós-procedimento.',
+      },
+      {
+        p: 'O sol faz o preenchimento durar menos?',
+        r: 'Exposição solar crônica e sem proteção contribui para a degradação do ácido hialurônico e, sobretudo, envelhece a pele ao redor. O resultado pode parecer pior mesmo com produto ainda presente, porque a qualidade da pele caiu.',
+      },
+    ],
+    seo: {
+      title: 'Posso tomar sol e ir à praia depois do preenchimento? | Guarujá',
+      description:
+        'Sol direto, mar e piscina têm prazo depois do preenchimento. Entenda o risco de mancha, o efeito do calor no inchaço e o que fazer no litoral. Guarujá, SP.',
+    },
+  },
+  {
+    slug: 'bioestimulador-de-colageno-o-tempo-que-ele-pede',
+    titulo: 'Bioestimulador não é preenchimento (e por isso demora)',
+    categoria: 'Facial',
+    resumo:
+      'Sair da sessão sem ver diferença assusta quem esperava resultado na hora. Mas é exatamente assim que funciona.',
+    leitura: '5 min',
+    data: '2026-08-20',
+    imagem: '/images/blog/perfil-facial.jpg',
+    corpo: [
+      {
+        tipo: 'p',
+        texto:
+          'Existe uma frustração clássica: a pessoa faz bioestimulador esperando o efeito do preenchimento, se olha no espelho no dia seguinte e acha que não funcionou. Funcionou — só que o resultado ainda nem começou a existir.',
+      },
+      { tipo: 'h2', texto: 'A diferença de mecanismo' },
+      {
+        tipo: 'p',
+        texto:
+          'O preenchimento ocupa espaço: você coloca o produto e ele dá volume ali, na hora. O bioestimulador faz outra coisa — ele provoca o seu organismo a produzir colágeno naquela região. Quem constrói o resultado é você, ao longo de meses, e é por isso que a melhora aparece devagar.',
+      },
+      {
+        tipo: 'destaque',
+        texto:
+          'Preenchimento entrega volume. Bioestimulador entrega sustentação e qualidade de pele. São objetivos diferentes.',
+      },
+      { tipo: 'h2', texto: 'A linha do tempo' },
+      {
+        tipo: 'lista',
+        itens: [
+          'Primeiros dias: pode haver leve inchaço, que não é o resultado — muita gente confunde',
+          'Primeiro mês: pouca ou nenhuma mudança visível, e isso é esperado',
+          'A partir de 2 a 3 meses: a melhora de firmeza e de textura começa a aparecer',
+          'De 3 a 6 meses: resultado se consolidando, geralmente com mais de uma sessão no protocolo',
+        ],
+      },
+      { tipo: 'h2', texto: 'Quando um, quando o outro' },
+      {
+        tipo: 'p',
+        texto:
+          'Se a queixa é perda de projeção ou de volume em uma região específica, preenchimento resolve o que bioestimulador não resolve. Se a queixa é pele que perdeu firmeza, textura opaca, aquele aspecto de "caiu um pouco tudo", o bioestimulador é o caminho. Muitos planos usam os dois, em momentos diferentes.',
+      },
+      {
+        tipo: 'p',
+        texto:
+          'Escolher errado aqui é caro em tempo: seis meses esperando um resultado que aquele produto nunca ia entregar.',
+      },
+    ],
+    faq: [
+      {
+        p: 'Qual a diferença entre bioestimulador e preenchimento?',
+        r: 'O preenchimento ocupa espaço e dá volume imediato. O bioestimulador estimula o organismo a produzir colágeno, então o resultado se constrói ao longo de meses e entrega sustentação e qualidade de pele, não volume pontual.',
+      },
+      {
+        p: 'Quanto tempo demora para ver resultado do bioestimulador?',
+        r: 'A melhora começa a aparecer por volta de 2 a 3 meses e se consolida entre 3 e 6 meses, normalmente com mais de uma sessão no protocolo. Pouca mudança no primeiro mês é esperada.',
+      },
+      {
+        p: 'O inchaço dos primeiros dias é o resultado?',
+        r: 'Não. O leve edema inicial é reação ao procedimento e passa. O resultado real é o colágeno que se forma ao longo dos meses seguintes.',
+      },
+    ],
+    seo: {
+      title: 'Bioestimulador de colágeno: quanto tempo leva o resultado | Guarujá',
+      description:
+        'Bioestimulador estimula colágeno e leva de 3 a 6 meses, diferente do preenchimento que dá volume imediato. Entenda a linha do tempo e quando cada um é indicado.',
+    },
+  },
+  {
+    slug: 'toxina-botulinica-ou-fios-de-pdo',
+    titulo: 'Toxina botulínica ou fios de PDO: quando cada um resolve',
+    categoria: 'Facial',
+    resumo:
+      'Os dois tratam a mesma região com frequência, mas atacam problemas diferentes. Um não substitui o outro.',
+    leitura: '5 min',
+    data: '2026-08-16',
+    imagem: '/images/cat-facial.jpg',
+    corpo: [
+      {
+        tipo: 'p',
+        texto:
+          'A dúvida costuma nascer da região: os dois aparecem em conversa sobre olhar cansado, sobrancelha caída, pés de galinha. Só que um trata movimento e o outro trata sustentação — e confundir isso leva a fazer o procedimento certo para o problema errado.',
+      },
+      { tipo: 'h2', texto: 'O que a toxina botulínica faz' },
+      {
+        tipo: 'p',
+        texto:
+          'Reduz temporariamente a contração de músculos específicos. Ela age sobre a linha que aparece quando você faz a expressão. Se a marca some quando o rosto está em repouso, é candidata a toxina.',
+      },
+      { tipo: 'h2', texto: 'O que os fios de PDO fazem' },
+      {
+        tipo: 'p',
+        texto:
+          'Trabalham sustentação e estímulo de colágeno no trajeto do fio. Atuam sobre o tecido que perdeu firmeza e desceu — algo que a toxina não levanta, porque não é problema de músculo contraindo demais.',
+      },
+      {
+        tipo: 'destaque',
+        texto:
+          'Marca que aparece só quando você faz expressão: toxina. Estrutura que desceu e fica caída em repouso: sustentação.',
+      },
+      { tipo: 'h2', texto: 'Por que muitas vezes se usa os dois' },
+      {
+        tipo: 'p',
+        texto:
+          'É comum o mesmo rosto ter as duas coisas ao mesmo tempo, e aí a combinação faz sentido: a toxina tira a marca dinâmica e reduz a força que puxa o tecido para baixo, enquanto o fio trabalha a sustentação. Um ajuda o resultado do outro a durar.',
+      },
+      { tipo: 'h2', texto: 'Duração' },
+      {
+        tipo: 'lista',
+        itens: [
+          'Toxina botulínica: efeito temporário, com retorno periódico definido na avaliação',
+          'Fios de PDO: o fio é absorvido, mas o colágeno estimulado no trajeto permanece por mais tempo',
+          'Nos dois casos, hábitos e características individuais mudam bastante a duração',
+        ],
+      },
+      {
+        tipo: 'p',
+        texto:
+          'Qual dos dois — ou os dois — é decisão da avaliação presencial, olhando o seu rosto em movimento e em repouso. Foto não mostra contração.',
+      },
+    ],
+    faq: [
+      {
+        p: 'Qual a diferença entre toxina botulínica e fios de PDO?',
+        r: 'A toxina reduz temporariamente a contração muscular e trata linhas de expressão. Os fios de PDO trabalham sustentação e estímulo de colágeno, atuando sobre tecido que perdeu firmeza. Tratam problemas diferentes.',
+      },
+      {
+        p: 'Posso fazer os dois juntos?',
+        r: 'Sim, é uma combinação comum quando o rosto apresenta as duas questões. A toxina reduz a marca dinâmica e a força que traciona o tecido, enquanto o fio trabalha a sustentação, o que costuma prolongar o resultado.',
+      },
+      {
+        p: 'Como sei qual é o meu caso?',
+        r: 'Se a marca aparece apenas quando você faz a expressão e some em repouso, é questão de movimento. Se a estrutura fica caída mesmo com o rosto relaxado, é questão de sustentação. A definição é feita na avaliação presencial, observando o rosto em movimento e em repouso.',
+      },
+    ],
+    seo: {
+      title: 'Toxina botulínica ou fios de PDO: qual é o seu caso? | Guarujá',
+      description:
+        'Toxina trata linha de expressão, fios de PDO tratam sustentação e estimulam colágeno. Entenda a diferença, quando combinar os dois e quanto dura cada um.',
+    },
+  },
+  {
+    slug: 'primeiras-48-horas-depois-do-preenchimento',
+    titulo: 'As primeiras 48 horas depois do preenchimento',
+    categoria: 'Facial',
+    resumo:
+      'O que é reação esperada, o que é sinal de alerta e a lista do que não fazer — mesmo achando que não tem problema.',
+    leitura: '5 min',
+    data: '2026-08-13',
+    imagem: '/images/clinica-consultorio.jpg',
+    corpo: [
+      {
+        tipo: 'p',
+        texto:
+          'Boa parte da ansiedade do pós vem de não saber o que é normal. Inchaço, um roxinho, sensação de endurecido — quase tudo isso faz parte, mas ninguém consegue relaxar sem saber onde está a linha.',
+      },
+      { tipo: 'h2', texto: 'O que é esperado' },
+      {
+        tipo: 'lista',
+        itens: [
+          'Edema, principalmente nas primeiras 24 a 48 horas — nos lábios costuma ser mais evidente',
+          'Pequenos hematomas nos pontos de entrada, que se resolvem em alguns dias',
+          'Sensibilidade ao toque na região',
+          'Sensação de que a área está mais firme ou irregular ao tocar, que melhora conforme o edema baixa',
+        ],
+      },
+      {
+        tipo: 'destaque',
+        texto:
+          'Não avalie o resultado nas primeiras 48 horas. O que você está vendo ainda é inchaço, não é o resultado.',
+      },
+      { tipo: 'h2', texto: 'O que evitar' },
+      {
+        tipo: 'lista',
+        itens: [
+          'Atividade física intensa, que aumenta o fluxo e o edema',
+          'Calor: sauna, banho muito quente, exposição prolongada ao sol',
+          'Álcool, que favorece inchaço e hematoma',
+          'Massagear, apertar ou "ajeitar" a região por conta própria',
+          'Dormir com o rosto pressionado contra o travesseiro, quando a aplicação foi facial',
+        ],
+      },
+      { tipo: 'h2', texto: 'Quando entrar em contato' },
+      {
+        tipo: 'p',
+        texto:
+          'Dor que aumenta em vez de diminuir, palidez ou mudança de cor da pele na região, dor desproporcional, alteração de visão ou qualquer sintoma que foge do padrão descrito acima merecem contato imediato com quem aplicou. Isso não é comum, mas é o tipo de coisa em que tempo importa — não espere para ver se melhora sozinho.',
+      },
+      {
+        tipo: 'p',
+        texto:
+          'Toda paciente sai da sessão com orientação de pós e com canal aberto para tirar dúvida. Essa parte não é formalidade: é o que permite agir cedo se algo fugir do esperado.',
+      },
+    ],
+    faq: [
+      {
+        p: 'É normal ficar inchado depois do preenchimento?',
+        r: 'Sim. O edema é esperado, especialmente nas primeiras 24 a 48 horas, e nos lábios costuma ser mais evidente. Pequenos hematomas nos pontos de entrada e sensibilidade ao toque também fazem parte.',
+      },
+      {
+        p: 'O que não posso fazer depois do preenchimento?',
+        r: 'Nas primeiras 48 horas evite atividade física intensa, calor (sauna, banho muito quente, sol prolongado), álcool, massagear ou apertar a região, e dormir com o rosto pressionado no travesseiro quando a aplicação foi facial.',
+      },
+      {
+        p: 'Quando devo procurar atendimento?',
+        r: 'Dor que aumenta em vez de diminuir, palidez ou mudança de cor da pele na região, dor desproporcional ou alteração de visão pedem contato imediato com quem aplicou. São situações incomuns, mas em que agir cedo faz diferença.',
+      },
+    ],
+    seo: {
+      title: 'Pós-preenchimento: as primeiras 48 horas | Dra. Fernanda Paz',
+      description:
+        'Inchaço, hematoma e sensibilidade são esperados depois do preenchimento. Veja o que evitar nas primeiras 48h e quais sinais pedem contato imediato.',
+    },
+  },
+  {
+    slug: 'posso-malhar-depois-do-procedimento',
+    titulo: 'Posso malhar depois do procedimento?',
+    categoria: 'Corporal',
+    resumo:
+      'A pergunta de quem não quer perder a rotina. A resposta muda conforme o procedimento — e o motivo não é frescura.',
+    leitura: '4 min',
+    data: '2026-08-09',
+    imagem: '/images/cat-bem-estar.jpg',
+    corpo: [
+      {
+        tipo: 'p',
+        texto:
+          'Quem treina com constância não quer parar, e a orientação de pausar costuma soar exagerada. Só que o motivo é concreto: exercício aumenta frequência cardíaca, pressão e fluxo sanguíneo, e isso interfere diretamente em duas coisas — inchaço e posicionamento do produto recém-aplicado.',
+      },
+      { tipo: 'h2', texto: 'Por que a pausa existe' },
+      {
+        tipo: 'lista',
+        itens: [
+          'Aumento de fluxo intensifica o edema, o que atrasa a leitura do resultado',
+          'Aumenta a chance de hematoma nos pontos de entrada',
+          'Calor e suor em pele com pontos de entrada abertos elevam o risco de contaminação',
+          'Em preenchimento, movimento e pressão na região logo após a aplicação podem interferir na acomodação do produto',
+        ],
+      },
+      {
+        tipo: 'destaque',
+        texto:
+          'A pausa é curta e o prazo varia por procedimento. É bem menos tempo do que a maioria imagina.',
+      },
+      { tipo: 'h2', texto: 'Não é tudo igual' },
+      {
+        tipo: 'p',
+        texto:
+          'Um preenchimento facial, uma aplicação de toxina, um protocolo corporal injetável e um procedimento capilar têm orientações diferentes entre si — e a região tratada também pesa. Treino de pernas depois de um procedimento no rosto não tem o mesmo peso que abdominal depois de um procedimento no abdome.',
+      },
+      { tipo: 'h2', texto: 'O que costuma ser liberado antes' },
+      {
+        tipo: 'p',
+        texto:
+          'Caminhada leve e atividade de baixa intensidade normalmente voltam antes do treino pesado. O que fica por último é o que eleva muito a frequência cardíaca, o que gera muito suor e o que pressiona a região tratada.',
+      },
+      {
+        tipo: 'p',
+        texto:
+          'Se a rotina de treino é importante para você — e para muita gente é —, diga isso na avaliação. Dá para planejar a data do procedimento em função da sua semana, em vez de descobrir a restrição depois.',
+      },
+    ],
+    faq: [
+      {
+        p: 'Posso malhar depois de fazer preenchimento?',
+        r: 'Atividade física intensa deve ser evitada logo após o procedimento, porque o aumento de fluxo sanguíneo intensifica o edema e a chance de hematoma, e a pressão na região pode interferir na acomodação do produto. O prazo é curto e definido conforme o caso.',
+      },
+      {
+        p: 'Quanto tempo preciso ficar sem treinar?',
+        r: 'Varia conforme o procedimento e a região tratada. Caminhada e atividades de baixa intensidade costumam ser liberadas antes do treino pesado. A orientação específica é dada no pós-procedimento.',
+      },
+      {
+        p: 'Posso agendar o procedimento pensando na minha rotina de treino?',
+        r: 'Sim, e é recomendável comentar isso na avaliação. Dá para escolher a data considerando sua semana de treino, em vez de descobrir a restrição depois de aplicado.',
+      },
+    ],
+    seo: {
+      title: 'Posso malhar depois do procedimento estético? | Guarujá, SP',
+      description:
+        'Exercício aumenta fluxo sanguíneo, edema e risco de hematoma no pós-procedimento. Entenda o porquê da pausa, quanto tempo dura e o que é liberado antes.',
+    },
+  },
+  {
+    slug: 'estrias-brancas-ou-vermelhas-tem-tratamento',
+    titulo: 'Estrias brancas e vermelhas não são a mesma coisa',
+    categoria: 'Pele',
+    resumo:
+      'A cor não é detalhe estético: ela diz em que fase a estria está, e isso muda tudo no que dá para esperar.',
+    leitura: '5 min',
+    data: '2026-08-06',
+    imagem: '/images/cat-pele.jpg',
+    corpo: [
+      {
+        tipo: 'p',
+        texto:
+          'Quase todo mundo chega perguntando se estria tem tratamento. Tem — mas a primeira pergunta de volta é sobre a cor, porque estria vermelha e estria branca são fases diferentes do mesmo processo, com potencial de resposta bem diferente.',
+      },
+      { tipo: 'h2', texto: 'Estria vermelha ou arroxeada' },
+      {
+        tipo: 'p',
+        texto:
+          'É a fase inicial, ainda inflamatória, com circulação ativa na região. É a melhor janela de tratamento que existe: o tecido ainda está em processo e responde melhor ao estímulo.',
+      },
+      {
+        tipo: 'destaque',
+        texto:
+          'Estria vermelha é a janela boa. Quanto mais cedo ali dentro, melhor o resultado possível.',
+      },
+      { tipo: 'h2', texto: 'Estria branca' },
+      {
+        tipo: 'p',
+        texto:
+          'É a fase madura, já cicatricial. A resposta existe, mas é mais lenta e mais limitada: o objetivo passa a ser melhorar textura, reduzir a profundidade e atenuar o contraste com a pele ao redor. Prometer sumiço completo de estria branca não é promessa realista.',
+      },
+      { tipo: 'h2', texto: 'O que muda o resultado' },
+      {
+        tipo: 'lista',
+        itens: [
+          'A fase em que a estria está — o fator que mais pesa',
+          'Largura e profundidade de cada lesão',
+          'Extensão da área a tratar',
+          'Constância: o protocolo é seriado, e resultado bom depende de completar as sessões',
+          'Cuidado domiciliar entre uma sessão e outra',
+        ],
+      },
+      { tipo: 'h2', texto: 'Expectativa honesta' },
+      {
+        tipo: 'p',
+        texto:
+          'O objetivo do tratamento é melhora significativa de aparência e textura, não apagar a estria. Quem promete pele lisa como antes está vendendo algo que a estria — que é uma cicatriz na derme — não permite entregar. E a diferença entre uma coisa e outra é justamente o que faz alguém sair satisfeito ou frustrado.',
+      },
+    ],
+    faq: [
+      {
+        p: 'Qual a diferença entre estria vermelha e estria branca?',
+        r: 'A vermelha ou arroxeada é a fase inicial, ainda inflamatória e com circulação ativa, e é a que melhor responde ao tratamento. A branca é a fase madura, já cicatricial, com resposta mais lenta e mais limitada.',
+      },
+      {
+        p: 'Estria branca tem tratamento?',
+        r: 'Tem, mas com objetivo diferente: melhorar textura, reduzir profundidade e atenuar o contraste com a pele ao redor. Sumiço completo não é resultado realista para estria em fase cicatricial.',
+      },
+      {
+        p: 'Quantas sessões são necessárias?',
+        r: 'O tratamento é seriado e o número depende da fase, da largura e profundidade das lesões e da extensão da área. Completar o protocolo e manter o cuidado domiciliar entre as sessões pesa diretamente no resultado.',
+      },
+    ],
+    seo: {
+      title: 'Estrias brancas e vermelhas: qual tem mais chance de melhorar?',
+      description:
+        'Estria vermelha está em fase inflamatória e responde melhor ao tratamento. Estria branca é cicatricial e pede expectativa realista. Entenda a diferença. Guarujá, SP.',
+    },
+  },
 ];
+
 
 
 export const acharArtigo = (slug: string) => ARTIGOS.find((a) => a.slug === slug);

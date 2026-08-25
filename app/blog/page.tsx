@@ -33,7 +33,7 @@ export default function Blog() {
 
       <section className="wrap pb-24 md:pb-32">
         {ARTIGOS.map((a, i) => (
-          <Reveal key={a.slug} delay={i * 70}>
+          <Reveal key={a.slug} delay={(i % 4) * 70}>
             <Link
               href={`/blog/${a.slug}`}
               className="group grid md:grid-cols-[200px_1fr_auto] gap-5 md:gap-12 items-start py-9 border-t border-linha"
