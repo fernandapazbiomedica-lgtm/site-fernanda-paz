@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-papel text-tinta font-sans antialiased;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  ::selection {
+    background: #8b0fc4;
+    color: #fff;
+  }
+  :focus-visible {
+    outline: 2px solid #8b0fc4;
+    outline-offset: 3px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  /* ——— tipografia ——— */
+  .display {
+    @apply font-display font-normal;
+    text-wrap: balance;
+  }
+  .eyebrow {
+    @apply text-eyebrow font-semibold uppercase tracking-[0.22em] text-roxo;
+  }
+  .eyebrow-mute {
+    @apply text-eyebrow font-semibold uppercase tracking-[0.22em] text-tinta-3;
+  }
+  .rotulo {
+    @apply text-label font-semibold uppercase tracking-[0.14em];
+  }
+  .corpo {
+    @apply text-tinta-2 max-w-medida;
+  }
+
+  /* ——— gesto 1: o ✦ ——— */
+  .spark {
+    @apply text-roxo inline-block leading-none;
+  }
+
+  /* ——— gesto 2: rail vertical ——— */
+  .rail {
+    @apply relative pl-6;
+  }
+  .rail::before {
+    content: '';
+    @apply absolute left-0 top-1 bottom-4 w-[3px] rounded-full bg-roxo;
+  }
+  .rail::after {
+    content: '✦';
+    @apply absolute left-[-3px] bottom-0 text-[10px] text-roxo leading-none;
+  }
+
+  /* ——— gesto 3: linha pontilhada ——— */
+  .pontilhada {
+    @apply border-t border-dotted border-linha;
+  }
+
+  /* ——— botões ——— */
+  .btn {
+    @apply rotulo inline-flex items-center gap-2 bg-roxo px-6 py-3.5 text-white
+           transition-colors duration-300 ease-suave hover:bg-violeta;
+  }
+  .btn-linha {
+    @apply rotulo inline-flex items-center gap-2 border border-current px-6 py-3.5
+           text-tinta transition-colors duration-300 ease-suave hover:text-roxo;
+  }
+  .btn-claro {
+    @apply rotulo inline-flex items-center gap-2 border border-white/35 px-6 py-3.5
+           text-white transition-colors duration-300 ease-suave hover:border-white;
+  }
+
+  /* ——— container ——— */
+  .wrap {
+    @apply mx-auto w-full max-w-[1240px] px-6 md:px-10;
+  }
+
+  /* ——— placeholder de conteúdo pendente ——— */
+  .pendente {
+    @apply relative flex items-center justify-center overflow-hidden bg-malva-nevoa text-center;
+    background-image: repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 14px,
+      rgba(139, 15, 196, 0.055) 14px,
+      rgba(139, 15, 196, 0.055) 28px
+    );
+  }
+  .pendente-tag {
+    @apply rotulo bg-roxo px-2.5 py-1 text-[10px] text-white;
+  }
+}
+
+/* reveal on scroll */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1), transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.visivel {
+  opacity: 1;
+  transform: none;
+}
+
+/* scrollbar do carrossel de resultados */
+.trilho::-webkit-scrollbar {
+  height: 2px;
+}
+.trilho::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.12);
+}
+.trilho::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* variáveis de fonte — definidas aqui porque as famílias vêm por <link> */
+:root {
+  --font-display: 'Bodoni Moda';
+  --font-sans: 'Manrope';
+  --font-script: 'Sacramento';
+}
