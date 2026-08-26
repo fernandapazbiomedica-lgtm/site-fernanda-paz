@@ -12,9 +12,9 @@ import { CapaArtigo } from '@/components/CapaArtigo';
  * troque por um caminho em /images quando a foto 4:5 chegar.
  */
 const TRIPTICO = [
-  { semente: 'triptico proporcao', imagem: null as string | null },
-  { semente: 'triptico equilibrio', imagem: null as string | null },
-  { semente: 'triptico estrutura', imagem: null as string | null },
+  { semente: 'triptico proporcao', imagem: '/images/triptico-1.jpg' as string | null },
+  { semente: 'triptico equilibrio', imagem: '/images/triptico-2.jpg' as string | null },
+  { semente: 'triptico estrutura', imagem: '/images/triptico-3.jpg' as string | null },
 ];
 import { Foto } from '@/components/Foto';
 import { HeroReel } from '@/components/HeroReel';
@@ -200,8 +200,8 @@ export default function Home() {
                 className="w-full max-w-[460px] mx-auto -mb-10 relative z-10 overflow-visible [&_text]:fill-malva"
               />
               <CapaArtigo
-                imagem={null}
-                titulo="detalhe macro harmonizacao"
+                imagem="/images/detalhe-macro.jpg"
+                titulo="Detalhe de textura de pele"
                 className="aspect-square w-full"
               />
             </Reveal>
