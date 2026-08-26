@@ -5,6 +5,17 @@ import { Reveal, Pendente, Media, CtaFaixa, TextoArco, AvisoResultados } from '@
 import { AntesDepois } from '@/components/AntesDepois';
 import { Reels } from '@/components/Reels';
 import { CASOS_GALERIA } from '@/lib/imagens';
+import { CapaArtigo } from '@/components/CapaArtigo';
+
+/**
+ * Tríptico da seção de harmonização. `imagem: null` mostra a capa abstrata —
+ * troque por um caminho em /images quando a foto 4:5 chegar.
+ */
+const TRIPTICO = [
+  { semente: 'triptico proporcao', imagem: null as string | null },
+  { semente: 'triptico equilibrio', imagem: null as string | null },
+  { semente: 'triptico estrutura', imagem: null as string | null },
+];
 import { Foto } from '@/components/Foto';
 import { HeroReel } from '@/components/HeroReel';
 import { ARTIGOS } from '@/lib/blog';
@@ -131,13 +142,21 @@ export default function Home() {
 
       {/* ——————————————————————— 05 · HARMONIZAÇÃO (editorial, escuro) */}
       <section className="bg-ameixa text-white">
-        <Media
-          claro
-          label="Faixa: macro de pele"
-          nota="Horizontal 21:6. Vídeo em loop mudo ou foto. Sangra de ponta a ponta."
-          className="h-[240px] md:h-[320px] w-full"
-          // src="/videos/macro-pele.mp4"
-        />
+        {/* tríptico 4:5 — três quadros no lugar da antiga faixa panorâmica,
+            que exigia foto 21:6 que ninguém tem. Cada quadro aceita foto real e,
+            sem ela, entra a capa abstrata. */}
+        <div className="wrap pt-16 md:pt-20">
+          <div className="grid grid-cols-3 gap-3 md:gap-5">
+            {TRIPTICO.map((q) => (
+              <CapaArtigo
+                key={q.semente}
+                imagem={q.imagem}
+                titulo={q.semente}
+                className="aspect-[4/5] w-full"
+              />
+            ))}
+          </div>
+        </div>
         <div className="wrap pt-16 md:pt-24 pb-24 md:pb-32">
           <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-12 lg:gap-20 items-start">
             <Reveal>
@@ -180,12 +199,10 @@ export default function Home() {
                 texto="proporção · equilíbrio · estrutura"
                 className="w-full max-w-[460px] mx-auto -mb-10 relative z-10 overflow-visible [&_text]:fill-malva"
               />
-              <Media
-                claro
-                label="Detalhe macro"
-                nota="Quadrado 1:1. Textura de pele real."
+              <CapaArtigo
+                imagem={null}
+                titulo="detalhe macro harmonizacao"
                 className="aspect-square w-full"
-                // src="/videos/detalhe.mp4"
               />
             </Reveal>
           </div>
