@@ -111,18 +111,26 @@ export function HeroReel({ className = '' }: { className?: string }) {
         </button>
       </div>
 
-      {/* marcadores de qual reel está tocando */}
-      <div className="absolute top-4 left-4 flex gap-1.5">
+      {/* marcadores de qual reel está tocando.
+          O traço tem 4px de altura, que é bonito e impossível de acertar com o
+          dedo. Por isso o botão carrega uma área de toque de 44px (o mínimo
+          recomendado) em volta, invisível, e só o traço é pintado. */}
+      <div className="absolute top-0 left-4 flex">
         {REELS.map((r, i) => (
           <button
             key={r.arquivo}
             type="button"
             onClick={() => setAtual(i)}
             aria-label={`Ver ${r.titulo}`}
-            className={`h-1 rounded-full transition-all ${
-              i === atual ? 'w-7 bg-white' : 'w-3 bg-white/40 hover:bg-white/70'
-            }`}
-          />
+            aria-current={i === atual}
+            className="group grid h-11 w-6 place-items-center"
+          >
+            <span
+              className={`h-1 rounded-full transition-all ${
+                i === atual ? 'w-7 bg-white' : 'w-3 bg-white/40 group-hover:bg-white/70'
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>

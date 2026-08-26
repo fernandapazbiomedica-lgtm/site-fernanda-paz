@@ -443,7 +443,7 @@ Object.assign(FAQS, {
 const ONDE = (pergunta: string, detalhe: string) => ({
   p: pergunta,
   r:
-    'O consultório fica na Rua Buenos Aires, 40, sala 4, na Vila Maia (região central do Guarujá), dentro do Physiomed Medicina e Saúde. ' +
+    'O consultório fica na Rua Buenos Aires, 40, sala 4, no Jardim Ideal (região central do Guarujá), dentro do Physiomed Medicina e Saúde. ' +
     'O atendimento é exclusivamente com hora marcada: o horário fica reservado para você, sem sala de espera cheia e sem fila. ' +
     'Recebemos pacientes de toda a Baixada Santista: Santos, São Vicente, Praia Grande, Cubatão, Bertioga, Mongaguá e Itanhaém. ' +
     'Quem vem de Santos ou de São Vicente chega pela balsa ou pela Rodovia Cônego Domênico Rangoni, e vale considerar o horário da travessia ao escolher o agendamento. ' +

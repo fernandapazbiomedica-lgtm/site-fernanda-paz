@@ -74,8 +74,8 @@ export default function Contato() {
 
           <div className="space-y-5 lg:sticky lg:top-28">
             <iframe
-              title="Mapa: Rua Buenos Aires, 40, Vila Maia, Guarujá"
-              src="https://www.google.com/maps?q=Rua+Buenos+Aires,+40,+Vila+Maia,+Guaruj%C3%A1+-+SP&output=embed"
+              title="Mapa: Rua Buenos Aires, 40, Jardim Ideal, Guarujá"
+              src="https://www.google.com/maps?q=Rua+Buenos+Aires,+40,+Jardim+Ideal,+Guaruj%C3%A1+-+SP&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               className="aspect-[4/3] w-full grayscale-[0.35] contrast-[1.05]"

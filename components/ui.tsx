@@ -294,7 +294,7 @@ export function Trilha({
 /* ——————————————————————————— aviso legal de resultados */
 export function AvisoResultados({ claro = false }: { claro?: boolean }) {
   return (
-    <p className={`text-[12px] leading-relaxed max-w-lg ${claro ? 'text-white/45' : 'text-tinta-3'}`}>
+    <p className={`text-[12px] leading-relaxed max-w-lg ${claro ? 'text-white/65' : 'text-tinta-3'}`}>
       Imagens meramente ilustrativas. Os resultados variam de acordo com as características individuais de cada
       paciente, o número de sessões e a adesão ao protocolo indicado. Publicação mediante autorização de uso de imagem.
     </p>

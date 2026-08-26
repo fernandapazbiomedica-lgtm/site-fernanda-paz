@@ -30,7 +30,7 @@ export const SITE = {
   endereco: {
     logradouro: 'Rua Buenos Aires, 40, sala 4',
     complemento: 'Physiomed Medicina e Saúde',
-    bairro: 'Vila Maia',
+    bairro: 'Jardim Ideal',
     cidade: 'Guarujá',
     uf: 'SP',
     cep: '11410-010',

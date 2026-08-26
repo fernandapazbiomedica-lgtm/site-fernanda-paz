@@ -60,7 +60,7 @@ export default function Home() {
                 Ver procedimentos
               </Link>
             </div>
-            <div className="mt-12 border-t border-dotted border-white/20 pt-5 flex flex-wrap gap-x-8 gap-y-2 rotulo text-white/45">
+            <div className="mt-12 border-t border-dotted border-white/20 pt-5 flex flex-wrap gap-x-8 gap-y-2 rotulo text-white/60">
               <span>Harmonização</span>
               <span>Estética avançada</span>
               <span>Rejuvenescimento</span>

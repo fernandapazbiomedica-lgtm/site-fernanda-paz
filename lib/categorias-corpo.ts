@@ -20,7 +20,7 @@ export type CategoriaCorpo = {
 };
 
 const ONDE_CAT = (o: string) =>
-  'O consultório fica na Rua Buenos Aires, 40, sala 4, na Vila Maia, região central do Guarujá, dentro do Physiomed Medicina e Saúde. ' +
+  'O consultório fica na Rua Buenos Aires, 40, sala 4, no Jardim Ideal, região central do Guarujá, dentro do Physiomed Medicina e Saúde. ' +
   'O atendimento é exclusivamente com hora marcada. Recebemos pacientes de toda a Baixada Santista: Santos, São Vicente, Praia Grande, Cubatão, Bertioga, Mongaguá e Itanhaém. ' +
   o;
 

@@ -12,7 +12,7 @@ export default function Footer() {
             <p className="display text-3xl text-white leading-tight">
               {SITE.nome}
             </p>
-            <p className="rotulo text-white/45 mt-3">
+            <p className="rotulo text-white/60 mt-3">
               {SITE.papel} · {SITE.crbm}
             </p>
             <p className="mt-6 text-white/70 text-[15px] max-w-xs">
@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 border-t border-white/12 pt-8 flex flex-col md:flex-row gap-4 md:items-center justify-between text-[12px] text-white/40">
+        <div className="mt-16 border-t border-white/12 pt-8 flex flex-col md:flex-row gap-4 md:items-center justify-between text-[12px] text-white/60">
           <p>
             © {new Date().getFullYear()} {SITE.nome} · {SITE.crbm} · {SITE.cidade}, {SITE.uf}
           </p>

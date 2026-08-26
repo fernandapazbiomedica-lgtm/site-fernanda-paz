@@ -8,7 +8,7 @@ const config: Config = {
         papel: '#FBF8FB',
         superficie: '#F3ECF2',
         malva: { DEFAULT: '#C9AEC4', nevoa: '#EAE0EA' },
-        tinta: { DEFAULT: '#15101B', 2: '#4A3F55', 3: '#7C6E88' },
+        tinta: { DEFAULT: '#15101B', 2: '#4A3F55', 3: '#695B74' },
         linha: '#DCCFDB',
         roxo: '#8B0FC4',
         violeta: '#A855F7',
