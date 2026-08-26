@@ -49,13 +49,13 @@ export function HeroReel({ className = '' }: { className?: string }) {
   };
 
   return (
-    <div className={`relative overflow-hidden bg-white/[0.04] ${className}`}>
+    <div className={`relative min-w-0 overflow-hidden bg-white/[0.04] ${className}`}>
       {estatico ? (
         // eslint-disable-next-line @next/next/no-img-element
         <img
           src={`/videos/${reel.arquivo}-poster.jpg`}
           alt={reel.titulo}
-          className="h-full w-full object-cover"
+          className="h-full w-full max-w-full object-cover"
         />
       ) : (
         <video
@@ -63,7 +63,7 @@ export function HeroReel({ className = '' }: { className?: string }) {
           ref={video}
           src={`/videos/${reel.arquivo}.mp4`}
           poster={`/videos/${reel.arquivo}-poster.jpg`}
-          className="h-full w-full object-cover animate-surgir"
+          className="h-full w-full max-w-full object-cover animate-surgir"
           muted={!comSom}
           playsInline
           autoPlay

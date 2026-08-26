@@ -33,7 +33,7 @@ export default function Home() {
               'radial-gradient(85% 70% at 90% -5%, rgba(139,15,196,0.42) 0%, transparent 62%), radial-gradient(65% 55% at -5% 105%, rgba(168,85,247,0.16) 0%, transparent 58%)',
           }}
         />
-        <div className="wrap relative grid lg:grid-cols-[1fr_0.85fr] gap-10 lg:gap-16 items-end pt-16 pb-16 lg:pt-24 lg:pb-24">
+        <div className="wrap relative grid lg:grid-cols-[1fr_0.85fr] gap-10 lg:gap-16 items-end pt-16 pb-16 lg:pt-24 lg:pb-24 [&>*]:min-w-0">
           <div className="animate-surgir">
             <p className="eyebrow text-malva flex items-center gap-2.5">
               <span className="spark text-malva">✦</span> {SITE.papel}
@@ -70,8 +70,11 @@ export default function Home() {
             </div>
           </div>
 
-          {/* reels — o trabalho acontecendo, sangra à direita */}
-          <div className="relative lg:-mr-10 xl:-mr-20">
+          {/* reels — o trabalho acontecendo, sangra à direita.
+              min-w-0: item de grid não encolhe abaixo da largura nativa do vídeo
+              por padrão, e o vídeo tem 720px. Sem isso a coluna estica para 720
+              e leva a página inteira junto no celular. */}
+          <div className="relative min-w-0 lg:-mr-10 xl:-mr-20">
             <HeroReel className="aspect-[3/4] w-full" />
           </div>
         </div>
