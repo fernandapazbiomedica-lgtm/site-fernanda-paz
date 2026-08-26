@@ -90,7 +90,7 @@ export default async function ProcedimentoPage({ params }: Props) {
             { label: p.nome },
           ]}
         />
-        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-end mt-10">
+        <div className="grid lg:grid-cols-[1.35fr_0.58fr] gap-10 lg:gap-14 items-center mt-8">
           <div>
             <p className="eyebrow">{c.nome}</p>
             <h1 className="display text-d1 mt-6">{p.nome}</h1>
@@ -107,7 +107,7 @@ export default async function ProcedimentoPage({ params }: Props) {
           <Foto
             src={imagemProcedimento(p.slug, p.categoria)}
             alt={`${p.nome} no Guarujá, Dra. Fernanda Paz`}
-            className="aspect-[4/5] w-full"
+            className="aspect-[4/5] w-full max-w-[320px] justify-self-start lg:justify-self-end"
             prioridade
           />
         </div>

@@ -52,7 +52,7 @@ export default async function CategoriaPage({ params }: Props) {
             { label: c.nome },
           ]}
         />
-        <div className="grid lg:grid-cols-[1.1fr_0.9fr] gap-10 lg:gap-16 items-end mt-10">
+        <div className="grid lg:grid-cols-[1.15fr_0.85fr] gap-10 lg:gap-16 items-center mt-10">
           <div>
             <p className="eyebrow">Categoria</p>
             <h1 className="display text-d1 mt-6">{c.nome}</h1>
