@@ -208,6 +208,46 @@ export function BarraWhatsApp() {
 }
 
 /* ——————————————————————————— faixa de CTA contextual */
+/**
+ * FaixaInstagram — convite para seguir o perfil.
+ *
+ * A clínica publica reel novo toda semana; o site mostra um recorte. Quem
+ * gostou do que viu aqui continua acompanhando lá, e é de lá que vem boa parte
+ * do agendamento. Fica logo depois dos reels, que é onde a vontade aparece.
+ */
+export function FaixaInstagram({ claro = false }: { claro?: boolean }) {
+  return (
+    <a
+      href={SITE.instagram.url}
+      target="_blank"
+      rel="noopener"
+      className={`group flex flex-col sm:flex-row sm:items-center justify-between gap-5 rounded-sm border px-6 py-7 md:px-8 transition ${
+        claro
+          ? 'border-white/15 hover:border-white/40 bg-white/[0.03]'
+          : 'border-tinta/12 hover:border-roxo bg-malva-nevoa'
+      }`}
+    >
+      <div className="flex items-center gap-4">
+        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" aria-hidden className="shrink-0">
+          <rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="12" cy="12" r="4" stroke="currentColor" strokeWidth="1.5" />
+          <circle cx="17.5" cy="6.5" r="1.1" fill="currentColor" />
+        </svg>
+        <div>
+          <p className={`rotulo ${claro ? 'text-malva' : 'text-roxo'}`}>Acompanhe o dia a dia</p>
+          <p className={`display text-[21px] mt-1 ${claro ? 'text-white' : 'text-tinta'}`}>
+            Tem resultado novo toda semana no Instagram.
+          </p>
+          <p className={`text-[13.5px] mt-1 ${claro ? 'text-white/60' : 'text-tinta-3'}`}>
+            {SITE.instagram.handle}
+          </p>
+        </div>
+      </div>
+      <span className={`${claro ? 'btn-claro' : 'btn'} shrink-0`}>Seguir no Instagram</span>
+    </a>
+  );
+}
+
 export function CtaFaixa({
   pergunta,
   botao,

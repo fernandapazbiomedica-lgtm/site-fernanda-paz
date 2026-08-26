@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { CATEGORIAS, porCategoria } from '@/lib/procedimentos';
 import { SITE, wa, MSG } from '@/lib/site';
-import { Reveal, Pendente, Media, CtaFaixa, TextoArco, AvisoResultados } from '@/components/ui';
+import { Reveal, Pendente, Media, CtaFaixa, TextoArco, AvisoResultados, FaixaInstagram } from '@/components/ui';
 import { AntesDepois } from '@/components/AntesDepois';
 import { Reels } from '@/components/Reels';
 import { CASOS_GALERIA } from '@/lib/imagens';
@@ -100,7 +100,38 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ——————————————————————— 03 · CATEGORIAS (grade assimétrica) */}
+      {/* ——————————————————————— 03 · ANTES E DEPOIS (fundo ameixa)
+          Vem antes das categorias: o resultado é o que a pessoa procura primeiro,
+          e é ele que dá contexto para a lista de procedimentos logo abaixo. */}
+      <section className="bg-ameixa text-white overflow-hidden">
+        <div className="wrap py-24 md:py-32">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+            <div>
+              <p className="eyebrow text-malva">Antes e depois</p>
+              <h2 className="display text-d2 text-white mt-4">
+                O resultado é <em className="italic">individual</em>.
+              </h2>
+            </div>
+            <Link href="/resultados" className="btn-claro shrink-0">
+              Ver todos os casos
+            </Link>
+          </div>
+
+          <div className="trilho flex gap-6 overflow-x-auto pb-6 -mx-6 px-6 md:mx-0 md:px-0 snap-x">
+            {CASOS_GALERIA.slice(0, 6).map((caso, i) => (
+              <div key={`${caso.nome}-${i}`} className="shrink-0 w-[248px] md:w-[290px] snap-start">
+                <AntesDepois caso={caso} claro className="aspect-[4/5] w-full" />
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-10">
+            <AvisoResultados claro />
+          </div>
+        </div>
+      </section>
+
+      {/* ——————————————————————— 04 · CATEGORIAS (grade assimétrica) */}
       <section className="wrap py-24 md:py-32">
         <div className="max-w-2xl mb-16">
           <p className="eyebrow-mute">Áreas de atuação</p>
@@ -136,14 +167,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ——————————————————————— 04 · CTA CONTEXTUAL 1 */}
+      {/* ——————————————————————— 05 · CTA CONTEXTUAL 1 */}
       <CtaFaixa
         pergunta="Não sabe qual procedimento é indicado para o seu objetivo?"
         botao="Conversar pelo WhatsApp"
         mensagem={MSG.duvida}
       />
 
-      {/* ——————————————————————— 05 · HARMONIZAÇÃO (editorial, escuro) */}
+      {/* ——————————————————————— 06 · HARMONIZAÇÃO (editorial, escuro) */}
       <section className="bg-ameixa text-white">
         {/* tríptico 4:5 — três quadros no lugar da antiga faixa panorâmica,
             que exigia foto 21:6 que ninguém tem. Cada quadro aceita foto real e,
@@ -212,7 +243,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ——————————————————————— 06 · A DRA. */}
+      {/* ——————————————————————— 07 · A DRA. */}
       <section className="bg-superficie">
         <div className="wrap py-24 md:py-32">
           <div className="grid lg:grid-cols-[0.4fr_0.6fr] gap-12 lg:gap-20 items-center">
@@ -253,56 +284,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ——————————————————————— 07 · RESULTADOS (fundo ameixa) */}
+      {/* ——————————————————————— 08 · REELS (fundo ameixa) */}
       <section className="bg-ameixa text-white overflow-hidden">
         <div className="wrap py-24 md:py-32">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
             <div>
-              <p className="eyebrow text-malva">Antes e depois</p>
+              <p className="eyebrow text-malva">Em movimento</p>
               <h2 className="display text-d2 text-white mt-4">
-                O resultado é <em className="italic">individual</em>.
+                O procedimento <em className="italic">acontecendo</em>.
               </h2>
             </div>
-            <Link href="/resultados" className="btn-claro shrink-0">
-              Ver todos os casos
-            </Link>
           </div>
+          <Reels claro />
 
-          <div className="trilho flex gap-6 overflow-x-auto pb-6 -mx-6 px-6 md:mx-0 md:px-0 snap-x">
-            {CASOS_GALERIA.slice(0, 6).map((caso, i) => (
-              <div key={`${caso.nome}-${i}`} className="shrink-0 w-[248px] md:w-[290px] snap-start">
-                <AntesDepois caso={caso} claro className="aspect-[4/5] w-full" />
-              </div>
-            ))}
-          </div>
-
-          {/* reels — o material mais forte da clínica */}
-          <div className="mt-20 pt-16 border-t border-white/10">
-            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
-              <div>
-                <p className="eyebrow text-malva">Em movimento</p>
-                <h2 className="display text-d2 text-white mt-4">
-                  O procedimento <em className="italic">acontecendo</em>.
-                </h2>
-              </div>
-            </div>
-            <Reels claro />
-          </div>
-
-          <div className="mt-10">
-            <AvisoResultados claro />
+          <div className="mt-12">
+            <FaixaInstagram claro />
           </div>
         </div>
       </section>
 
-      {/* ——————————————————————— 08 · CTA CONTEXTUAL 2 */}
+      {/* ——————————————————————— 09 · CTA CONTEXTUAL 2 */}
       <CtaFaixa
         pergunta="Viu um resultado parecido com o que você procura?"
         botao="Agendar minha avaliação"
         mensagem={MSG.resultados}
       />
 
-      {/* ——————————————————————— 09 · BLOG */}
+      {/* ——————————————————————— 10 · BLOG */}
       <section className="wrap py-24 md:py-32">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div className="max-w-xl">
@@ -332,7 +340,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ——————————————————————— 10 · CLÍNICA & LOCALIZAÇÃO */}
+      {/* ——————————————————————— 11 · CLÍNICA & LOCALIZAÇÃO */}
       <section className="bg-superficie">
         <div className="wrap py-24 md:py-32">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
