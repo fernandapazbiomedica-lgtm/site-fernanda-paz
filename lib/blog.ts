@@ -5,8 +5,8 @@ export type Artigo = {
   resumo: string;
   leitura: string;
   data: string;
-  /** capa do artigo — caminho a partir de /public */
-  imagem: string;
+  /** capa 4:5 do artigo. Sem foto atribuída, entra a capa abstrata. */
+  imagem?: string | null;
   /** conteúdo em blocos. PENDENTE de revisão clínica da Dra. */
   corpo: { tipo: 'p' | 'h2' | 'destaque' | 'lista'; texto?: string; itens?: string[] }[];
   faq?: { p: string; r: string }[];
@@ -22,7 +22,7 @@ export const ARTIGOS: Artigo[] = [
       'A resposta curta é não, e a resposta longa explica exatamente por que algumas pessoas ficam com essa aparência.',
     leitura: '4 min',
     data: '2026-08-21',
-    imagem: '/images/cat-facial.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -95,7 +95,7 @@ export const ARTIGOS: Artigo[] = [
       'Sol é o vilão conhecido. Mas calor, luz de tela e alguns procedimentos comuns também entram na lista.',
     leitura: '5 min',
     data: '2026-08-14',
-    imagem: '/images/cat-pele.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -162,7 +162,7 @@ export const ARTIGOS: Artigo[] = [
       'Os nomes são parecidos, o resultado esperado é parecido, mas as indicações são quase opostas.',
     leitura: '4 min',
     data: '2026-08-07',
-    imagem: '/images/cat-corporal.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -356,7 +356,7 @@ export const ARTIGOS: Artigo[] = [
       'Ela não é lipoaspiração sem corte, e tratar as duas como equivalentes é a origem de quase toda frustração.',
     leitura: '5 min',
     data: '2026-08-11',
-    imagem: '/images/cat-bem-estar.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -425,7 +425,7 @@ export const ARTIGOS: Artigo[] = [
       'Perder fio todo dia é esperado. O que muda o jogo é perceber o momento em que deixou de ser.',
     leitura: '5 min',
     data: '2026-08-04',
-    imagem: '/images/cat-capilar.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -494,7 +494,7 @@ export const ARTIGOS: Artigo[] = [
       'Quase todo tratamento que muda alguma coisa de verdade leva meses. Novembro é tarde para começar.',
     leitura: '6 min',
     data: '2026-08-25',
-    imagem: '/images/cat-corporal.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -569,7 +569,7 @@ export const ARTIGOS: Artigo[] = [
       'A pergunta de quem mora no litoral. A resposta tem prazo, e tem um detalhe sobre calor que quase ninguém comenta.',
     leitura: '4 min',
     data: '2026-08-23',
-    imagem: '/images/blog/labios-detalhe.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -637,7 +637,7 @@ export const ARTIGOS: Artigo[] = [
       'Sair da sessão sem ver diferença assusta quem esperava resultado na hora. Mas é exatamente assim que funciona.',
     leitura: '5 min',
     data: '2026-08-20',
-    imagem: '/images/blog/perfil-facial.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -705,7 +705,7 @@ export const ARTIGOS: Artigo[] = [
       'Os dois tratam a mesma região com frequência, mas atacam problemas diferentes. Um não substitui o outro.',
     leitura: '5 min',
     data: '2026-08-16',
-    imagem: '/images/cat-facial.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -778,7 +778,7 @@ export const ARTIGOS: Artigo[] = [
       'O que é reação esperada, o que é sinal de alerta e a lista do que não fazer — mesmo achando que não tem problema.',
     leitura: '5 min',
     data: '2026-08-13',
-    imagem: '/images/clinica-consultorio.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -851,7 +851,7 @@ export const ARTIGOS: Artigo[] = [
       'A pergunta de quem não quer perder a rotina. A resposta muda conforme o procedimento — e o motivo não é frescura.',
     leitura: '4 min',
     data: '2026-08-09',
-    imagem: '/images/cat-bem-estar.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',
@@ -919,7 +919,7 @@ export const ARTIGOS: Artigo[] = [
       'A cor não é detalhe estético: ela diz em que fase a estria está, e isso muda tudo no que dá para esperar.',
     leitura: '5 min',
     data: '2026-08-06',
-    imagem: '/images/cat-pele.jpg',
+    imagem: null, // PENDENTE — ver lista de fotos
     corpo: [
       {
         tipo: 'p',

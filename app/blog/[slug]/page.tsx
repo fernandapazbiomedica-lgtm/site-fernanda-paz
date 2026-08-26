@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ARTIGOS, acharArtigo } from '@/lib/blog';
 import { Reveal, Pendente, CtaFaixa, Trilha } from '@/components/ui';
-import { Foto } from '@/components/Foto';
+import { CapaArtigo } from '@/components/CapaArtigo';
 import { SITE, wa, MSG } from '@/lib/site';
 import { REVISADO } from '@/lib/revisao';
 
@@ -76,29 +76,31 @@ export default async function ArtigoPage({ params }: Props) {
           <Trilha
             itens={[{ href: '/', label: 'Início' }, { href: '/blog', label: 'Blog' }, { label: a.categoria }]}
           />
-          <div className="max-w-3xl mt-10">
-            <p className="eyebrow">{a.categoria}</p>
-            <h1 className="display text-d1 mt-6">{a.titulo}</h1>
-            <p className="text-[19px] text-tinta-2 mt-8 max-w-medida leading-relaxed">{a.resumo}</p>
-            <div className="flex flex-wrap gap-x-8 gap-y-2 rotulo text-tinta-3 mt-9 pontilhada pt-5">
-              <span>{SITE.nome}</span>
-              <span>{SITE.crbm}</span>
-              <span>{a.leitura} de leitura</span>
-              <time dateTime={a.data}>
-                {new Date(a.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
-              </time>
+          <div className="grid lg:grid-cols-[1fr_0.42fr] gap-10 lg:gap-20 items-start mt-10">
+            <div>
+              <p className="eyebrow">{a.categoria}</p>
+              <h1 className="display text-d1 mt-6">{a.titulo}</h1>
+              <p className="text-[19px] text-tinta-2 mt-8 max-w-medida leading-relaxed">{a.resumo}</p>
+              <div className="flex flex-wrap gap-x-8 gap-y-2 rotulo text-tinta-3 mt-9 pontilhada pt-5">
+                <span>{SITE.nome}</span>
+                <span>{SITE.crbm}</span>
+                <span>{a.leitura} de leitura</span>
+                <time dateTime={a.data}>
+                  {new Date(a.data).toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}
+                </time>
+              </div>
             </div>
+
+            <CapaArtigo
+              imagem={a.imagem}
+              titulo={a.titulo}
+              className="aspect-[4/5] w-full max-w-[420px] lg:max-w-none"
+              prioridade
+            />
           </div>
         </header>
 
-        <Foto
-          src={a.imagem}
-          alt={a.titulo}
-          className="h-[220px] md:h-[300px] w-full"
-          prioridade
-        />
-
-        <div className="wrap py-16 md:py-20">
+        <div className="wrap pb-16 md:pb-20">
           <div className="grid lg:grid-cols-[1fr_0.42fr] gap-12 lg:gap-20">
             <div className="max-w-[680px]">
               {a.corpo.map((b, i) => {

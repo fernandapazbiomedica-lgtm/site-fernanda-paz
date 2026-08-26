@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import { ARTIGOS } from '@/lib/blog';
 import { Reveal, CtaFaixa, Trilha } from '@/components/ui';
-import { Foto } from '@/components/Foto';
+import { CapaArtigo } from '@/components/CapaArtigo';
 import { MSG } from '@/lib/site';
 
 export const metadata: Metadata = {
@@ -36,12 +36,12 @@ export default function Blog() {
           <Reveal key={a.slug} delay={(i % 4) * 70}>
             <Link
               href={`/blog/${a.slug}`}
-              className="group grid md:grid-cols-[200px_1fr_auto] gap-5 md:gap-12 items-start py-9 border-t border-linha"
+              className="group grid md:grid-cols-[150px_1fr_auto] gap-5 md:gap-12 items-start py-9 border-t border-linha"
             >
-              <Foto
-                src={a.imagem}
-                alt=""
-                className="aspect-[4/3] w-full md:w-[200px] overflow-hidden"
+              <CapaArtigo
+                imagem={a.imagem}
+                titulo={a.titulo}
+                className="aspect-[4/5] w-[128px] md:w-[150px] overflow-hidden"
               />
               <div>
                 <p className="eyebrow">{a.categoria}</p>
