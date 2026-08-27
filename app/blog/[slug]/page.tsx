@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ARTIGOS, acharArtigo } from '@/lib/blog';
@@ -127,12 +128,108 @@ export default async function ArtigoPage({ params }: Props) {
                       ))}
                     </ul>
                   );
+                if (b.tipo === 'quadro') {
+                  const todos = a.corpo.flatMap((bl) => bl.produtos ?? []);
+                  return (
+                    <div key={i} className="my-10 overflow-x-auto border-t border-linha">
+                      <table className="w-full min-w-[520px] border-collapse text-left">
+                        <thead>
+                          <tr>
+                            <th className="rotulo py-3 pr-4 text-tinta-3">Produto</th>
+                            <th className="rotulo py-3 pr-4 text-tinta-3">Destaque</th>
+                            <th className="rotulo py-3 text-right text-tinta-3">Faixa</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {todos.map((pr, n) => (
+                            <tr key={n} className="border-t border-linha">
+                              <td className="py-3.5 pr-4">
+                                <span className="text-[15px] text-tinta">{pr.nome}</span>{' '}
+                                <span className="rotulo text-tinta-3">{pr.marca}</span>
+                              </td>
+                              <td className="py-3.5 pr-4 text-[14px] text-tinta-3">{pr.selo ?? '—'}</td>
+                              <td className="py-3.5 text-right text-[13px] tracking-[0.18em] text-roxo">
+                                {'$'.repeat(pr.faixa)}
+                                <span className="text-linha">{'$'.repeat(3 - pr.faixa)}</span>
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  );
+                }
+                if (b.tipo === 'produtos')
+                  return (
+                    <ul key={i} className="my-9 space-y-5">
+                      {b.produtos?.map((pr, n) => (
+                        <li
+                          key={n}
+                          className="grid grid-cols-[88px_1fr] gap-5 border border-linha bg-papel p-5 sm:grid-cols-[112px_1fr] sm:gap-6 sm:p-6"
+                        >
+                          <div className="relative aspect-square w-full overflow-hidden bg-malva-nevoa">
+                            {pr.imagem && (
+                              <Image
+                                src={pr.imagem}
+                                alt={`${pr.nome} — ${pr.marca}`}
+                                fill
+                                sizes="112px"
+                                className="object-contain p-1.5"
+                              />
+                            )}
+                          </div>
+
+                          <div className="min-w-0">
+                            {pr.selo && <p className="eyebrow mb-2">{pr.selo}</p>}
+                            <p className="display text-[20px] leading-snug">{pr.nome}</p>
+                            <p className="rotulo mt-1.5 text-tinta-3">{pr.marca}</p>
+                            <p className="mt-3 text-[15px] leading-relaxed text-tinta-2">{pr.porque}</p>
+
+                            <div className="mt-4 flex flex-wrap items-center gap-x-5 gap-y-3">
+                              {pr.href ? (
+                                <a
+                                  href={pr.href}
+                                  target="_blank"
+                                  rel="nofollow sponsored noopener"
+                                  className="btn px-5 py-3"
+                                >
+                                  Ver na Shopee
+                                </a>
+                              ) : (
+                                <span className="rotulo text-tinta-3">Sem link — procure pelo nome</span>
+                              )}
+                              <span
+                                className="text-[13px] tracking-[0.18em] text-roxo"
+                                title={['acessível', 'intermediário', 'investimento'][pr.faixa - 1]}
+                              >
+                                {'$'.repeat(pr.faixa)}
+                                <span className="text-linha">{'$'.repeat(3 - pr.faixa)}</span>
+                              </span>
+                            </div>
+                          </div>
+                        </li>
+                      ))}
+                    </ul>
+                  );
                 return (
                   <p key={i} className="text-[17.5px] leading-[1.75] text-tinta-2 mb-6">
                     {b.texto}
                   </p>
                 );
               })}
+
+              {a.afiliado && (
+                <div className="mt-12 border-t border-linha pt-6">
+                  <p className="eyebrow-mute">Transparência</p>
+                  <p className="mt-3 text-[14.5px] leading-relaxed text-tinta-3">
+                    Os links de produto desta página são links de afiliado: se você comprar por eles, a
+                    clínica pode receber uma comissão, sem custo adicional para você. A indicação vem do que
+                    faz sentido para o tipo de pele descrito aqui, não da comissão — e nenhuma marca pagou
+                    para aparecer. Produto de prateleira não substitui avaliação: o que serve para o seu caso
+                    sai da consulta.
+                  </p>
+                </div>
+              )}
 
               {!REVISADO && (
               <p className="mt-10 text-[12.5px] text-tinta-3 border-l-2 border-roxo pl-4">
