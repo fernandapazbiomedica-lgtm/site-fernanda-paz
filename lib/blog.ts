@@ -7,9 +7,37 @@ export type Artigo = {
   data: string;
   /** capa 4:5 do artigo. Sem foto atribuída, entra a capa abstrata. */
   imagem?: string | null;
+  /**
+   * Produto indicado dentro de um bloco `produtos`.
+   * `faixa` é o nível de investimento, nunca o preço: a Shopee muda preço toda
+   * semana e valor fixo no texto envelhece em dias.
+   * Sem `href`, o produto é citado mas não vira link — é o caso de quem não
+   * tem link de afiliado disponível.
+   */
   /** conteúdo em blocos. PENDENTE de revisão clínica da Dra. */
-  corpo: { tipo: 'p' | 'h2' | 'destaque' | 'lista'; texto?: string; itens?: string[] }[];
+  corpo: {
+    tipo: 'p' | 'h2' | 'destaque' | 'lista' | 'produtos' | 'quadro';
+    texto?: string;
+    itens?: string[];
+    produtos?: {
+      nome: string;
+      marca: string;
+      faixa: 1 | 2 | 3;
+      porque: string;
+      href?: string;
+      /** foto do anúncio de afiliado (CDN da Shopee) */
+      imagem?: string;
+      /** selo curto de destaque — no máximo um por etapa */
+      selo?: string;
+    }[];
+  }[];
   faq?: { p: string; r: string }[];
+  /**
+   * true quando o artigo traz links de afiliado. Liga o aviso obrigatório —
+   * a Dra. assina com CRBM, e indicação remunerada sem aviso deixa de ser
+   * conteúdo educativo. Também é exigência do programa de afiliados.
+   */
+  afiliado?: boolean;
   seo: { title: string; description: string };
 };
 
@@ -983,82 +1011,209 @@ export const ARTIGOS: Artigo[] = [
   },
 
   // SKINCARE GUIDES
-  {
-    slug: 'pele-oleosa-acneica',
-    titulo: 'Rotina para Pele Oleosa e Acneica',
-    categoria: 'Skincare',
-    resumo: 'Guia completo de cuidados, produtos recomendados e procedimentos para controlar oleosidade e acne',
-    leitura: '8 min',
-    data: '2026-08-27',
-    corpo: [
+{
+    "slug": "pele-oleosa-acneica",
+    "titulo": "Pele oleosa e acneica: a rotina completa, etapa por etapa",
+    "categoria": "Skincare",
+    "resumo": "Como montar a rotina em quatro etapas, com opções em faixas de investimento diferentes — e o que produto nenhum resolve.",
+    "leitura": "9 min",
+    "data": "2026-08-27",
+    "corpo": [
       {
-        tipo: 'h2',
-        texto: 'Entendendo a Pele Oleosa'
+        "tipo": "p",
+        "texto": "Pele oleosa produz sebo demais — e o erro mais comum é tratar isso como sujeira. Quando a rotina vira uma sequência de produtos que ressecam, a barreira se danifica, a glândula entende que precisa compensar e produz ainda mais. É por isso que tanta gente relata que \"quanto mais eu limpo, mais oleosa fica\"."
       },
       {
-        tipo: 'p',
-        texto: 'A pele oleosa produz excesso de sebo, principalmente na zona T (testa, nariz e queixo). Isso acontece por hiperatividade das glândulas sebáceas, que podem ser estimuladas por fatores genéticos, hormonais ou ambientais.'
+          "tipo": "quadro"
+        },
+        {
+        "tipo": "destaque",
+        "texto": "O objetivo não é secar a pele. É controlar o sebo mantendo a barreira intacta."
       },
       {
-        tipo: 'p',
-        texto: 'Oleosidade em excesso favorece o acúmulo de bactérias e entupimento de poros, criando o ambiente perfeito para acne. Por isso pele oleosa e acneica costumam andar juntas.'
+        "tipo": "p",
+        "texto": "Abaixo está uma rotina montada por etapa, com opções em faixas de investimento diferentes em cada uma. Você não precisa de todos: precisa de um de cada etapa. Começar com quatro produtos que você usa direito rende mais do que dez que você usa na metade das vezes."
       },
       {
-        tipo: 'destaque',
-        texto: 'Limpar profundamente é essencial, mas agressividade demais piora o quadro: a pele inflamada produz mais sebo como proteção.'
+        "tipo": "h2",
+        "texto": "Etapa 1 · Limpeza"
       },
       {
-        tipo: 'h2',
-        texto: 'Rotina Básica de Skincare'
+        "tipo": "p",
+        "texto": "Duas vezes ao dia, e só. O limpador certo tira o excesso de sebo sem deixar aquela sensação de repuxado — se a pele fica \"rangendo\" depois de lavar, o produto é agressivo demais para o uso diário."
       },
       {
-        tipo: 'lista',
-        itens: [
-          'Limpeza com gel ou espuma próprios para oleosa (2x dia)',
-          'Tônico ou essência para balancear pH (opcional mas recomendado)',
-          'Hidratante leve, em gel ou sérum (importante: pele oleosa precisa hidratar)',
-          'Protetor solar (imprescindível - FPS 30+ mínimo)',
-          'Esfoliante suave 1-2x semana (ácidos suaves como AHA/BHA)'
+        "tipo": "produtos",
+        "produtos": [
+          {
+            "nome": "Gel de Limpeza GL-01 200g",
+          "imagem": "https://down-br.img.susercontent.com/file/br-11134207-81z1k-mfvjjhqdoefb5e",
+          "selo": "Melhor custo-benefício",
+            "marca": "Principia",
+            "faixa": 1,
+            "porque": "Fórmula enxuta e rende muito pelo tamanho. É o ponto de partida de melhor custo por uso da lista.",
+            "href": "https://s.shopee.com.br/6L3xYyLYN3"
+          },
+          {
+            "nome": "Limpador Facial Antioleosidade 300ml",
+          "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-8258u-mfu72aovqozzb6",
+            "marca": "Creamy",
+            "faixa": 1,
+            "porque": "Volume grande por um preço acessível, pensado para quem lava o rosto duas vezes por dia sem economizar produto.",
+            "href": "https://s.shopee.com.br/1VyhoAgP2F"
+          },
+          {
+            "nome": "Effaclar Gel de Limpeza Concentrado 300g",
+          "imagem": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-m03h0yfndsvd6b",
+            "marca": "La Roche-Posay",
+            "faixa": 2,
+            "porque": "O mais conhecido da categoria, e conhecido por bom motivo. Vale se a sua pele não tolerou bem os anteriores.",
+            "href": "https://s.shopee.com.br/7VFuxJpeiR"
+          }
         ]
       },
       {
-        tipo: 'h2',
-        texto: 'Produtos Recomendados para Pele Oleosa'
+        "tipo": "h2",
+        "texto": "Etapa 2 · Tratamento"
       },
       {
-        tipo: 'p',
-        texto: 'Busque por: Ácido salicílico (BHA), Ácido glicólico (AHA), Niacinamida, Ácido azeláico. Evite: Óleos pesados, manteigas, produtos muito oclusivos.'
+        "tipo": "p",
+        "texto": "É aqui que a rotina age de verdade. Niacinamida ajuda a regular sebo e a acalmar a vermelhidão; ácido salicílico entra no poro e desobstrui. Um de cada vez, à noite, e com paciência: ativo bom leva de seis a oito semanas para mostrar o que faz."
       },
       {
-        tipo: 'h2',
-        texto: 'Quando Procurar Procedimentos?'
+        "tipo": "produtos",
+        "produtos": [
+          {
+            "nome": "Sérum NC-10 30ml",
+          "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-824j0-mpw30qm0tw5rd3",
+          "selo": "Comece por aqui",
+            "marca": "Principia",
+            "faixa": 1,
+            "porque": "Niacinamida a 10%. Se você vai comprar um único ativo desta lista, comece por este.",
+            "href": "https://s.shopee.com.br/4VcJNdN7SC"
+          },
+          {
+            "nome": "Sérum Mix-01 30ml",
+          "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-7ratz-mam044h0jhia79",
+            "marca": "Principia",
+            "faixa": 1,
+            "porque": "Combina mais de um ativo no mesmo frasco — simplifica a rotina de quem não quer gerenciar cinco potes.",
+            "href": "https://s.shopee.com.br/3g3CO889y4"
+          },
+          {
+            "nome": "Sérum Antiacne Acne Defense 5D 30ml",
+          "imagem": "https://down-br.img.susercontent.com/file/br-11134207-81ztc-mkhxew6cwhdtd6",
+          "selo": "Para acne ativa",
+            "marca": "Creamy",
+            "faixa": 2,
+            "porque": "Formulado para quadro de acne ativa, não só para oleosidade. É o passo seguinte quando a niacinamida sozinha não deu conta.",
+            "href": "https://s.shopee.com.br/7fZL9Y4W0v"
+          },
+          {
+            "nome": "Effaclar Duo(+) M",
+            "marca": "La Roche-Posay",
+            "faixa": 2,
+            "porque": "Clássico para lesões inflamadas e marcas que ficam depois delas. Uso localizado."
+          },
+          {
+            "nome": "Depore Acne Intense Sérum",
+          "imagem": "https://down-br.img.susercontent.com/file/br-11134207-7r98o-mals62msc7i199",
+            "marca": "Ada Tina",
+            "faixa": 3,
+            "porque": "Concentração maior e fórmula mais técnica. Faz sentido para quem já tentou o básico sem resposta.",
+            "href": "https://s.shopee.com.br/20uyPHzm6A"
+          },
+          {
+            "nome": "Salicylic Renewal Sérum",
+          "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-825a5-msdt5isk76didd",
+            "marca": "Isdinceutics",
+            "faixa": 3,
+            "porque": "Ácido salicílico em formulação de linha profissional. O mais caro da lista, e o que menos precisa de reforço.",
+            "href": "https://s.shopee.com.br/1LfHc6WVcu"
+          }
+        ]
       },
       {
-        tipo: 'p',
-        texto: 'Se a rotina caseira não controla bem a oleosidade ou acne, procedimentos profissionais podem ser muito eficazes. Microagulhamento, peeling químico e skinbooster estimulam renovação de pele e melhoram a textura.'
+        "tipo": "h2",
+        "texto": "Etapa 3 · Hidratação"
       },
       {
-        tipo: 'destaque',
-        texto: 'Procedimentos especializados complementam (não substituem) a rotina. Você continua cuidando em casa diariamente.'
+        "tipo": "p",
+        "texto": "A etapa que quem tem pele oleosa costuma pular — e é justamente ela que impede o efeito rebote. Textura em gel ou loção leve, com o rótulo dizendo não comedogênico."
+      },
+      {
+        "tipo": "produtos",
+        "produtos": [
+          {
+            "nome": "Oil Control Loção Hidratante Facial 52g",
+          "imagem": "https://down-br.img.susercontent.com/file/sg-11134201-82613-mk15b9lcq8zr72",
+          "selo": "Resolve o medo de hidratar",
+            "marca": "CeraVe",
+            "faixa": 2,
+            "porque": "Hidrata com ceramidas e ainda ajuda no controle de brilho. Resolve a objeção de \"hidratante deixa minha pele mais oleosa\".",
+            "href": "https://s.shopee.com.br/8V8S9BlFNT"
+          }
+        ]
+      },
+      {
+        "tipo": "h2",
+        "texto": "Etapa 4 · Proteção solar"
+      },
+      {
+        "tipo": "p",
+        "texto": "Não é opcional, e em pele acneica é o que decide se a marca vermelha vira mancha escura permanente. Procure versões com toque seco ou com cor, que ainda ajudam a disfarçar a vermelhidão. Reaplicar a cada duas ou três horas de exposição — aqui no litoral, com a reverberação da areia e da água, isso pesa mais do que em cidade de interior."
+      },
+      {
+        "tipo": "p",
+        "texto": "Esta lista ainda não traz protetor solar. É a peça que falta para a rotina ficar completa."
+      },
+      {
+        "tipo": "h2",
+        "texto": "O que a rotina em casa não resolve"
+      },
+      {
+        "tipo": "p",
+        "texto": "Skincare controla o quadro; ele não retira o que já ficou. Poro dilatado, cicatriz de acne e mancha pós-inflamatória respondem a procedimento, não a produto — por mais caro que o produto seja. E acne em quadro moderado a grave costuma pedir conduta médica, não só cosmético."
+      },
+      {
+        "tipo": "lista",
+        "itens": [
+          "Peelings faciais: renovam a camada superficial e ajudam na textura e nas marcas",
+          "Microagulhamento facial: atua sobre cicatriz de acne e qualidade da pele",
+          "Skinbooster: hidratação profunda em pele que oleia mas está desidratada por dentro"
+        ]
+      },
+      {
+        "tipo": "p",
+        "texto": "A escolha entre eles, a ordem e o intervalo saem da avaliação — porque pele oleosa com acne ativa não recebe o mesmo protocolo de pele oleosa já controlada."
       }
     ],
-    faq: [
+    "faq": [
       {
-        p: 'Pele oleosa precisa de hidratante?',
-        r: 'Sim! Oleosidade não significa hidratação. Muitas peles oleosas são desidratadas. Um hidratante leve (sérum ou gel) balanceia a hidratação sem deixar a pele pesada.'
+        "p": "Pele oleosa precisa de hidratante?",
+        "r": "Precisa. Pular a hidratação é o erro que mais alimenta o problema: a barreira danificada faz a glândula produzir mais sebo para compensar. A diferença está na textura — gel ou loção leve, não creme espesso."
       },
       {
-        p: 'Com que frequência devo lavar o rosto?',
-        r: 'Duas vezes ao dia é o padrão: manhã e noite. Se sua pele fica muito oleosa durante o dia, um enxágue rápido com água é melhor do que lavar novamente, pois múltiplas lavagens irritam.'
+        "p": "Quanto tempo até ver resultado?",
+        "r": "De seis a oito semanas para os ativos mostrarem o que fazem, usando com constância. Trocar de produto a cada duas semanas é a forma mais rápida de nunca saber o que funcionou."
       },
       {
-        p: 'Posso usar esfoliantes todo dia?',
-        r: 'Não. Esfoliação diária danifica a barreira de proteção da pele e causa irritação. Comece com 1-2 vezes por semana e ajuste conforme a tolerância da sua pele.'
+        "p": "Posso usar niacinamida e ácido salicílico juntos?",
+        "r": "Muita gente usa, mas introduza um de cada vez e com semanas de intervalo. Começar os dois juntos torna impossível saber qual está ajudando e qual está irritando."
+      },
+      {
+        "p": "Produto caro funciona melhor?",
+        "r": "Nem sempre. O que decide é o ativo, a concentração e a constância de uso. Nesta lista há opções de entrada que entregam o principal — o valor mais alto costuma vir de formulação mais elaborada e de melhor sensorial, não de um resultado várias vezes maior."
+      },
+      {
+        "p": "Isso substitui a consulta?",
+        "r": "Não. Uma rotina bem montada controla oleosidade e ajuda no quadro leve. Acne moderada a grave, cicatriz e mancha que não saem pedem avaliação — e conduta que produto de prateleira não alcança."
       }
     ],
-    seo: {
-      title: 'Rotina Skincare para Pele Oleosa e Acneica | Dra. Fernanda Paz',
-      description: 'Guia completo de skincare para pele oleosa: produtos recomendados, rotina diária, e procedimentos que funcionam. Clínica da Fefe, Guarujá.'
+    "afiliado": true,
+    "seo": {
+      "title": "Pele oleosa e acneica: rotina completa e produtos por faixa de preço",
+      "description": "Rotina em quatro etapas para pele oleosa e acneica, com opções de limpeza, tratamento e hidratação em diferentes faixas de investimento. Dra. Fernanda Paz, Guarujá."
     }
   },
   {
