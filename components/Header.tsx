@@ -10,6 +10,7 @@ const LINKS = [
   { href: '/', label: 'Início' },
   { href: '/sobre', label: 'A Dra.' },
   { href: '/procedimentos', label: 'Procedimentos', painel: true },
+  { href: '/quizzes', label: 'Quizzes' },
   { href: '/resultados', label: 'Resultados' },
   { href: '/blog', label: 'Blog' },
   { href: '/contato', label: 'Contato' },
