@@ -8,6 +8,7 @@ import { CapaArtigo } from '@/components/CapaArtigo';
 import { SITE, wa, MSG } from '@/lib/site';
 import { REVISADO } from '@/lib/revisao';
 
+import Pergunta from '@/components/Pergunta';
 type Props = { params: Promise<{ slug: string }> };
 
 export function generateStaticParams() {
@@ -256,8 +257,13 @@ export default async function ArtigoPage({ params }: Props) {
 
             <aside className="lg:sticky lg:top-28 lg:self-start">
               <div className="bg-superficie p-8">
-                <p className="display text-[23px] leading-tight">
-                  Ainda com dúvida sobre o <em className="italic">seu</em> caso?
+              </div>article>
+              
+            </aside>article>
+            
+                  <Pergunta artigo={a.titulo} />
+            
+            {outros.length > 0 && ({outros.length > 0 && (Ainda com dúvida sobre o <em className="italic">seu</em> caso?
                 </p>
                 <p className="text-[14.5px] text-tinta-2 mt-4">
                   Artigo é informação geral. A conduta certa sai da avaliação individual.
@@ -269,7 +275,7 @@ export default async function ArtigoPage({ params }: Props) {
             </aside>
           </div>
         </div>
-      </article>
+      h
 
       {outros.length > 0 && (
         <section className="wrap pb-24">
