@@ -142,7 +142,7 @@ export default function Header() {
 
       {/* menu mobile */}
       {menu && (
-        <div className="lg:hidden fixed inset-x-0 top-[73px] bottom-0 bg-papel overflow-y-auto">
+        <div className="lg:hidden fixed inset-x-0 top-full bottom-0 bg-papel overflow-y-auto">
           <div className="wrap py-8">
             {LINKS.map((l) => (
               <Link
