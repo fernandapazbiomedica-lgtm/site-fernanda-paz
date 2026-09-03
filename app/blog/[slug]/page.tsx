@@ -131,6 +131,21 @@ export default async function ArtigoPage({ params }: Props) {
                       ))}
                     </ul>
                   );
+                if (b.tipo === 'imagem')
+                  return (
+                    <figure key={i} className="my-8">
+                      <Foto
+                        src={b.src || ''}
+                        alt={b.alt || 'Imagem do artigo'}
+                        className="w-full h-auto rounded-lg"
+                      />
+                      {b.alt && (
+                        <figcaption className="mt-3 text-[14px] text-tinta-3 italic text-center">
+                          {b.alt}
+                        </figcaption>
+                      )}
+                    </figure>
+                  );
                 if (b.tipo === 'produtos')
                   return (
                     <ul key={i} className="my-7">

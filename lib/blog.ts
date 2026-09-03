@@ -7,7 +7,7 @@ export type Artigo = {
   data: string;
   imagem?: string;
   /** conteúdo em blocos. PENDENTE de revisão clínica da Dra. */
-  corpo: ({ tipo: 'p' | 'h2' | 'destaque' | 'lista'; texto?: string; itens?: string[] } | {
+  corpo: ({ tipo: 'p' | 'h2' | 'destaque' | 'lista' | 'imagem'; texto?: string; itens?: string[]; src?: string; alt?: string } | {
     tipo: 'produtos';
     produtos: Array<{
       nome: string;
@@ -233,6 +233,11 @@ export const ARTIGOS: Artigo[] = [
         texto: 'Pele oleosa produz sebo demais — e o erro mais comum é tratar isso como sujeira. Quando a rotina vira "dessecante total", a barreira fica comprometida, a pele fica inflamada, e produz MAIS sebo como proteção. É um ciclo que se retroalimenta.'
       },
       {
+        tipo: 'imagem',
+        src: '/images/blog-content/pele-oleosa.jpg',
+        alt: 'Pele oleosa: produção de sebo em excesso'
+      },
+      {
         tipo: 'destaque',
         texto: 'O objetivo não é secar a pele. É controlar o sebo mantendo a barreira intacta.'
       },
@@ -275,6 +280,11 @@ export const ARTIGOS: Artigo[] = [
       {
         tipo: 'p',
         texto: 'É aqui que a rotina age de verdade. Niacinamida ajuda a regular sebo e a acalmar a vermelhidão; ácido salicílico e glicólico entram nos poros e desobstruem. Escolha UM nesta etapa — combinações muito concentradas de ativos irritam.'
+      },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/pele-acneica.jpg',
+        alt: 'Pele acneica: acne ativa com inflamação e oleosidade'
       },
       {
         tipo: 'produtos',
@@ -351,6 +361,11 @@ export const ARTIGOS: Artigo[] = [
       {
         tipo: 'p',
         texto: 'Skincare controla o quadro; ele não retira o que já ficou. Poro dilatado, cicatriz de acne e mancha escura que ficou depois da inflamação — essas são indicações para consultório.'
+      },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/poros-dilatados.jpg',
+        alt: 'Poros dilatados: resultado da oleosidade não controlada'
       },
       {
         tipo: 'lista',
