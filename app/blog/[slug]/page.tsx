@@ -143,7 +143,7 @@ export default async function ArtigoPage({ params }: Props) {
                             <p className="text-[14px] text-tinta-2 mt-1">{p.porque}</p>
                             {p.href ? (
                               <a href={p.href} target="_blank" rel="noopener" className="text-roxo font-medium text-[14px] hover:underline mt-2 inline-block">
-                                Comprar
+                                Comprar aqui
                               </a>
                             ) : (
                               <p className="text-[13px] text-tinta-3 italic mt-2">Sem link — procure pelo nome</p>

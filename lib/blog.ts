@@ -259,13 +259,6 @@ export const ARTIGOS: Artigo[] = [
             selo: 'Melhor custo-benefício'
           },
           {
-            nome: 'Limpador Facial Antioleosidade 300ml',
-            marca: 'Creamy',
-            faixa: 'acessível',
-            porque: 'Volume grande por um preço acessível, pensado para quem lava o rosto duas vezes por dia sem economizar.',
-            href: 'https://s.shopee.com.br/1VyhoAgP2F'
-          },
-          {
             nome: 'Effaclar Gel de Limpeza Concentrado 300g',
             marca: 'La Roche-Posay',
             faixa: 'intermediário',
@@ -307,13 +300,6 @@ export const ARTIGOS: Artigo[] = [
             porque: 'Formulado para quadro de acne ativa, não só para oleosidade. É o passo seguinte quando a niacinamida sozinha não resolve.',
             href: 'https://s.shopee.com.br/7fZL9Y4W0v',
             selo: 'Para acne ativa'
-          },
-          {
-            nome: 'Effaclar Duo(+) M',
-            marca: 'La Roche-Posay',
-            faixa: 'intermediário',
-            porque: 'Clássico para lesões inflamadas e marcas que ficam depois delas. Uso localizado.',
-            href: 'https://s.shopee.com.br/1LfHc6WVcu'
           },
           {
             nome: 'Depore Acne Intense Sérum',
@@ -461,11 +447,52 @@ export const ARTIGOS: Artigo[] = [
       },
       {
         tipo: 'h2',
-        texto: 'Produtos com Ativos Indicados'
+        texto: 'Produtos Despigmentantes com Resultado'
       },
       {
         tipo: 'p',
-        texto: 'Procure por: Ácido kójico, Ácido tranexâmico, Niacinamida, Vitamina C estabilizada, Ácido azeláico. Aplicar regularmente melhora o clareamento.'
+        texto: 'Procure por ativos como Vitamina C, Ácido tranexâmico, Niacinamida e Ácido azeláico. Aplicar regularmente melhora o clareamento significativamente. Escolha um por etapa — não combine muitos ativos.'
+      },
+      {
+        tipo: 'produtos',
+        produtos: [
+          {
+            nome: 'Sérum Facial VC-10 30ml',
+            marca: 'Principia',
+            faixa: 'acessível',
+            porque: 'Vitamina C estabilizada a 10%. Antioxidante potente que clareia e restaura brilho. Melhor custo-benefício em vitamina C.',
+            href: 'https://s.shopee.com.br/9AO8wXAbxN',
+            selo: 'Começa por aqui'
+          },
+          {
+            nome: 'Mela B3 Sérum Antimanchas 30ml',
+            marca: 'La Roche-Posay',
+            faixa: 'intermediário',
+            porque: 'Niacinamida + B3 específico para manchas. Reduz produção de melanina e clareia marcas já instaladas.',
+            href: 'https://s.shopee.com.br/qj11OSxHg'
+          },
+          {
+            nome: 'Isdinceutics Melaclear Advanced 30ml',
+            marca: 'Isdin',
+            faixa: 'intermediário',
+            porque: 'Fórmula potente com ativos clareadores concentrados. Para melasma que já foi trabalhado e precisa de potência extra.',
+            href: 'https://s.shopee.com.br/4VcJO9wnNx'
+          },
+          {
+            nome: 'Clarivis TX Ultra',
+            marca: 'Ada Tina',
+            faixa: 'investimento',
+            porque: 'Combinação de ácido tranexâmico + retinol. Máxima potência em clareamento e renovação. Para quem já tentou básicos sem resultado.',
+            href: 'https://s.shopee.com.br/3VjmCL4bAh'
+          },
+          {
+            nome: 'Anti-Pigment Dual Sérum 30ml',
+            marca: 'Eucerin',
+            faixa: 'intermediário',
+            porque: 'Dupla ação com ativos específicos para manchas e melasma. Textura leve, fácil de usar com outros produtos.',
+            href: 'https://s.shopee.com.br/7VFuxZnjIf'
+          }
+        ]
       },
       {
         tipo: 'h2',
@@ -482,16 +509,28 @@ export const ARTIGOS: Artigo[] = [
     ],
     faq: [
       {
-        p: 'Melasma tem cura?',
-        r: 'Não, mas tem controle muito bom. Melasma é uma tendência da sua pele, não uma doença. O foco é clarear o máximo possível e depois manter a proteção diária para o resultado se sustentar.'
+        p: 'Como tirar manchas de melasma rapidamente?',
+        r: 'Não existe "rápido" para melasma. Com procedimentos em consultório (laser ou peeling químico) + rotina em casa, 3-6 meses mostram resultado visível. Skincare sozinho é mais lento, mas funciona.'
       },
       {
-        p: 'Posso fazer procedimentos durante verão?',
-        r: 'Depende do procedimento. Alguns intensificam a sensibilidade ao sol e exigem proteção extra - ou esperar a época de menor exposição. Isso é avaliado junto com o procedimento escolhido.'
+        p: 'Qual produto é melhor para tirar manchas?',
+        r: 'Nenhum produto isolado resolve melasma. A combinação de vitamina C + protetor solar FPS 50+ é o básico. Se quer resultado mais rápido, adicione ácido tranexâmico ou procure por procedimentos.'
       },
       {
-        p: 'Quanto tempo para ver resultado?',
-        r: 'Com rotina consistente em casa, alguns meses. Com procedimentos, o resultado é mais rápido e visível, mas ainda requer paciência - melasma não some em uma única sessão.'
+        p: 'Melasma tem cura permanente?',
+        r: 'Não. Melasma é uma tendência da pele — pode clarear muito, mas a predisposição permanece. O controle é excelente com proteção solar diária e rotina de clareamento consistente.'
+      },
+      {
+        p: 'Posso fazer procedimentos para melasma durante o verão?',
+        r: 'Alguns procedimentos intensificam sensibilidade ao sol. É melhor fazer em meses de menor exposição (março-maio ou setembro-outubro). Converse com a dermatologista sobre o melhor período.'
+      },
+      {
+        p: 'Quanto tempo até ver resultado com skincare?',
+        r: 'Com rotina consistente (vitamina C + protetor solar diário), 3-4 meses já mostram melhora. Resultado máximo leva 6-8 meses. Se estagnar, é hora de considerar procedimentos.'
+      },
+      {
+        p: 'Protetor solar causa melasma?',
+        r: 'Não — o que causa é a falta de protetor. Alguns protetores antigos com avobenzona podiam manchar, mas os atuais são seguros. Escolha um bom protetor e aplique bem para prevenir piorar.'
       }
     ],
     seo: {
@@ -536,17 +575,108 @@ export const ARTIGOS: Artigo[] = [
       },
       {
         tipo: 'h2',
-        texto: 'Rotina Básica para Pele Seca'
+        texto: 'Rotina Completa para Pele Seca'
       },
       {
-        tipo: 'lista',
-        itens: [
-          'Limpeza suave com leite demaquilante ou óleo de limpeza',
-          'Tônico ou hidrolato para preparar a pele',
-          'Sérum ou essência hidratante',
-          'Hidratante mais rico (creme ou óleo)',
-          'Protetor solar (importante - proteção solar não resseca se for o certo)',
-          'Ocasional: máscara de hidratação profunda'
+        tipo: 'p',
+        texto: 'A rotina para pele seca deve focar em camadas de hidratação — hidrolato, sérum, creme e selante. Não pule etapas e escolha um produto por categoria.'
+      },
+      {
+        tipo: 'h3',
+        texto: 'Etapa 1 · Limpeza Suave'
+      },
+      {
+        tipo: 'p',
+        texto: 'Óleos e leites demaquilantes são mais suaves que sabonetes. Removem maquiagem e impurezas sem danificar a barreira lipídica.'
+      },
+      {
+        tipo: 'produtos',
+        produtos: [
+          {
+            nome: 'Óleo de Limpeza Facial 236ml',
+            marca: 'CeraVe',
+            faixa: 'intermediário',
+            porque: 'Remove maquiagem, sebo oxidado e impurezas sem ressecar. Sai com água e deixa a pele macia.',
+            href: 'https://s.shopee.com.br/20uyQKIC6I',
+            selo: 'Ideal para pele seca'
+          },
+          {
+            nome: 'Limpador Facial Hidratante 200ml',
+            marca: 'Creamy',
+            faixa: 'acessível',
+            porque: 'Leite demaquilante suave com ativos hidratantes. Perfeito para manhã e noite sem irritar.',
+            href: 'https://s.shopee.com.br/4VcJOoblZo'
+          }
+        ]
+      },
+      {
+        tipo: 'h3',
+        texto: 'Etapa 2 · Hidratação Intensiva'
+      },
+      {
+        tipo: 'p',
+        texto: 'Séruns hidratantes com ácido hialurônico vêm antes do creme para preparar a pele a receber mais umidade.'
+      },
+      {
+        tipo: 'produtos',
+        produtos: [
+          {
+            nome: 'Sérum AH-2 30ml',
+            marca: 'Principia',
+            faixa: 'acessível',
+            porque: 'Ácido hialurônico em dupla molecularidade — penetra e retém água. Melhor custo-benefício da categoria.',
+            href: 'https://s.shopee.com.br/AAGg9HWRUG',
+            selo: 'Melhor custo-benefício'
+          },
+          {
+            nome: 'Minéral 89 Sérum 30ml',
+            marca: 'Vichy',
+            faixa: 'intermediário',
+            porque: 'Água termal + minerais que recompõem a umidade da pele. Levíssimo mas poderoso.',
+            href: 'https://s.shopee.com.br/5LBQPWREz6'
+          }
+        ]
+      },
+      {
+        tipo: 'h3',
+        texto: 'Etapa 3 · Creme Hidratante Rico'
+      },
+      {
+        tipo: 'p',
+        texto: 'O creme sela a hidratação e restaura a barreira lipídica. Em pele muito seca, use logo após o sérum enquanto ainda está úmido.'
+      },
+      {
+        tipo: 'produtos',
+        produtos: [
+          {
+            nome: 'Creme Hidratante CH-01 50g',
+            marca: 'Principia',
+            faixa: 'acessível',
+            porque: 'Fórmula densa com ceramidas. Textura rica que absorve bem sem deixar oleoso.',
+            href: 'https://s.shopee.com.br/20uyQ6WNFz',
+            selo: 'Começa aqui'
+          },
+          {
+            nome: 'Creme Hidratante Facial Pele Seca a Extrasseca 50g',
+            marca: 'CeraVe',
+            faixa: 'intermediário',
+            porque: 'Ceramidas + ácido hialurônico. Específico para pele muito ressecada e irritada.',
+            href: 'https://s.shopee.com.br/4fvjb4Bwc2'
+          },
+          {
+            nome: 'Cicaplast Baume B5+ 40ml',
+            marca: 'La Roche-Posay',
+            faixa: 'intermediário',
+            porque: 'Mais um bálsamo que creme. Para pele extremamente seca ou danificada. Uso também em lábios e cutículas.',
+            href: 'https://s.shopee.com.br/AKa6Lf7n4R'
+          },
+          {
+            nome: 'Hyalo 90 Ultra Minerals',
+            marca: 'Ada Tina',
+            faixa: 'investimento',
+            porque: 'Concentração máxima de ácido hialurônico + minerais. Para quem já tentou tudo e precisa de resultado rápido.',
+            href: 'https://s.shopee.com.br/8fRsMi72pK'
+          }
         ]
       },
       {
@@ -560,8 +690,13 @@ export const ARTIGOS: Artigo[] = [
           'Álcool em produtos de limpeza',
           'Água muito quente no rosto',
           'Múltiplas lavagens do rosto',
-          'Produtos com fragrância forte (irritam pele seca)'
+          'Produtos com fragrância forte (irritam pele seca)',
+          'Trocar de marca toda semana — a pele precisa de tempo para se adaptar'
         ]
+      },
+      {
+        tipo: 'destaque',
+        texto: 'Dica importante: se sua pele é muito seca mas o hidratante não ajuda, pode ser um problema de barreira danificada, dermatite atópica ou ressecação patológica — situações que precisam de avaliação clínica, não só skincare.'
       },
       {
         tipo: 'h2',
@@ -574,16 +709,28 @@ export const ARTIGOS: Artigo[] = [
     ],
     faq: [
       {
+        p: 'Que tipo de skincare devo usar em pele seca?',
+        r: 'Foco em limpeza suave (sem álcool), séruns com ácido hialurônico, cremes ricos com ceramidas, e selante como óleo. Evite ácidos muito concentrados ou esfoliação frequente.'
+      },
+      {
+        p: 'Qual é o melhor produto para pele seca sensível?',
+        r: 'Procure por fórmulas sem fragrância, com centella asiática, ácido hialurônico e ceramidas. Marcas como CeraVe, La Roche-Posay e Creamy são seguras para pele reativa.'
+      },
+      {
         p: 'Pele seca precisa de protetor solar?',
-        r: 'Sim, mas escolha um protetor que não resseca. Protetores em spray ou muito fluidos podem piorar. Opte por protetores em creme ou aqueles formulados para pele seca.'
+        r: 'Sim, absolutamente. Escolha um em creme ou bastão (stick), não fluidos. O UV danifica ainda mais a barreira já comprometida. Teste marcas formuladas para pele seca.'
       },
       {
-        p: 'Posso usar óleos no rosto?',
-        r: 'Depende do seu tipo de pele. Para pele muito seca, óleos vegetais (argan, rosa mosqueta, jojoba) em pequena quantidade podem ser excelentes. Teste com cuidado para não entupir poros.'
+        p: 'Posso usar óleos naturais no rosto?',
+        r: 'Sim, mas com cuidado. Rosa mosqueta, argan e jojoba em pequena quantidade (2-3 gotas) após o sérum funcionam bem. Comece 1-2 vezes na semana para testar tolerância.'
       },
       {
-        p: 'Com que frequência devo fazer máscaras?',
-        r: 'Máscaras de hidratação podem ser usadas 1-2 vezes por semana em pele muito seca. Escolha as que deixam o rosto úmido (não as que secam rápido).'
+        p: 'Com que frequência devo fazer máscaras de hidratação?',
+        r: '1-2 vezes por semana. Escolha máscaras em creme ou gel que deixam o rosto úmido — evite aquelas que resecam rápido ou formam película.'
+      },
+      {
+        p: 'Quanto tempo até minha pele seca melhorar?',
+        r: '4-6 semanas de rotina consistente. A barreira leva tempo para se reconstruir. Se ainda estiver muito seca após 8 semanas, procure dermatologista — pode ser dermatite de contato ou ressecação patológica.'
       }
     ],
     seo: {
@@ -628,18 +775,102 @@ export const ARTIGOS: Artigo[] = [
       },
       {
         tipo: 'h2',
-        texto: 'Rotina Anti-Envelhecimento'
+        texto: 'Rotina Anti-Envelhecimento Completa'
       },
       {
-        tipo: 'lista',
-        itens: [
-          'Limpeza suave (manhã e noite)',
-          'Tônico ou essência',
-          'Sérum antioxidante (manhã) ou retinol (noite)',
-          'Hidratante com ativos anti-idade',
-          'Contorno de olhos (primeira região a envelhecer)',
-          'Protetor solar FPS 50+ (manhã)',
-          'Ocasional: máscaras noturnas nutritivas'
+        tipo: 'p',
+        texto: 'A rotina anti-age combina hidratação profunda, ativos que estimulam colágeno (retinol, vitamina C, peptídeos) e proteção solar rigorosa. Cada etapa é essencial.'
+      },
+      {
+        tipo: 'h3',
+        texto: 'Manhã: Proteção e Antioxidantes'
+      },
+      {
+        tipo: 'produtos',
+        produtos: [
+          {
+            nome: 'Sérum Vitamina C 15% + Ferúlico 0,5% 30ml',
+            marca: 'Panvel Dermativ',
+            faixa: 'investimento',
+            porque: 'Vitamina C estabilizada em alta concentração com ferúlico. Potente em antioxidação e clareamento. Melhor custo-benefício de vitamina C forte.',
+            href: 'https://s.shopee.com.br/4AzT0zsZmk',
+            selo: 'Melhor custo-benefício'
+          },
+          {
+            nome: 'Minéral 89 Sérum 30ml',
+            marca: 'Vichy',
+            faixa: 'intermediário',
+            porque: 'Água termal + minerais que hidratam e tonificam. Base excelente para pele madura - preparação perfeita para hidratante e protetor.',
+            href: 'https://s.shopee.com.br/5LBQPWREz6'
+          }
+        ]
+      },
+      {
+        tipo: 'h3',
+        texto: 'Noite: Estimulação de Colágeno'
+      },
+      {
+        tipo: 'produtos',
+        produtos: [
+          {
+            nome: 'Sérum AH-2 30ml',
+            marca: 'Principia',
+            faixa: 'acessível',
+            porque: 'Ácido hialurônico em dupla molecularidade. Prepara a pele para absorver o retinol e hidrata em profundidade.',
+            href: 'https://s.shopee.com.br/4VcJPhkPne',
+            selo: 'Começa aqui'
+          },
+          {
+            nome: 'Sérum RN-0,3 30ml',
+            marca: 'Principia',
+            faixa: 'acessível',
+            porque: 'Retinol 0,3% — concentração perfeita para começar ou manutenção. Estimula colágeno, reduz rugas sem irritar muito.',
+            href: 'https://s.shopee.com.br/70JeOn2NSB'
+          },
+          {
+            nome: 'Sérum Antissinais Retinol 0,3% 30ml',
+            marca: 'Sallve',
+            faixa: 'intermediário',
+            porque: 'Retinol 0,3% com ativos complementares. Melhora rugas e firmeza sem o ressecamento típico de retinóis altos.',
+            href: 'https://s.shopee.com.br/3g3CQmlR9W'
+          },
+          {
+            nome: 'Liftactiv Retinol Specialist',
+            marca: 'Vichy',
+            faixa: 'intermediário',
+            porque: 'Retinol + água termal + cafeína. Para quem quer resultado em rugas e firmeza. Textura rica que não resseca.',
+            href: 'https://s.shopee.com.br/6q0ECmQXQ2'
+          },
+          {
+            nome: 'Hyalu B5 Sérum 30ml',
+            marca: 'La Roche-Posay',
+            faixa: 'intermediário',
+            porque: 'Ácido hialurônico + panthenol. Hidratação máxima com efecto tensor suave. Ótimo para pele madura ressecada.',
+            href: 'https://s.shopee.com.br/qj13HLUrp'
+          },
+          {
+            nome: 'PDRN DNA Concentrate',
+            marca: 'Ada Tina',
+            faixa: 'investimento',
+            porque: 'Ingrediente premium que estimula renovação celular profunda. Para pele muito envelhecida que quer resultado rápido.',
+            href: 'https://s.shopee.com.br/AAGgAadJv0'
+          }
+        ]
+      },
+      {
+        tipo: 'h3',
+        texto: 'Hidratação Anti-Idade'
+      },
+      {
+        tipo: 'produtos',
+        produtos: [
+          {
+            nome: 'Neovadiol Peri/Pós-Menopausa',
+            marca: 'Vichy',
+            faixa: 'intermediário',
+            porque: 'Formulado especificamente para pele madura em transição hormonal. Restabelece firmeza e hidratação profunda.',
+            href: 'https://s.shopee.com.br/2gAfEkgtLT'
+          }
         ]
       },
       {
@@ -657,16 +888,28 @@ export const ARTIGOS: Artigo[] = [
     ],
     faq: [
       {
-        p: 'Devo começar retinol depois dos 30?',
-        r: 'Depende. Se sua pele já tem rugas visíveis ou se você quer prevenir, sim. Retinol é seguro aos 20 também, como prevenção. O importante é começar com concentração baixa e aumentar gradualmente.'
+        p: 'Que tipo de skincare devo usar se minha pele é madura?',
+        r: 'Foco em hidratação profunda, ativos que estimulam colágeno (retinol, vitamina C), proteção solar rigorosa e contorno de olhos. Evite ácidos muito concentrados ou esfoliação frequente.'
       },
       {
-        p: 'Qual é a melhor idade para começar procedimentos?',
-        r: 'Não existe idade certa - existe indicação. Se você tem rugas, flacidez, ou quer prevenir, procedimentos podem ser feitos desde que haja indicação profissional. Muitos começam aos 30-40, outros precisam cedo, outros esperam.'
+        p: 'Retinol é bom para rugas mesmo? Esse produto funciona?',
+        r: 'Sim, é comprovado. Retinol estimula colágeno e acelera renovação celular. Começar com 0,3% e aumentar gradualmente garante resultado sem irritação. Demora 8-12 semanas para ver diferença visível.'
       },
       {
-        p: 'Posso interromper a rotina anti-idade?',
-        r: 'Se parar, a pele volta a envelhecer no seu ritmo natural. Não fica pior do que ficaria, mas os resultados conquistados dependem da continuidade.'
+        p: 'Com que idade devo começar a usar retinol?',
+        r: 'Não existe idade de corte. Se sua pele já tem rugas dinâmicas (aparecem quando faz expressão), comece. Se quer prevenir, pode começar aos 25-30. O importante é começar baixo e aumentar conforme a pele adapta.'
+      },
+      {
+        p: 'Qual é o melhor produto para tirar rugas?',
+        r: 'Nenhum isolado resolve rugas. A combinação de protetor solar FPS 50+ + retinol + vitamina C é o básico que funciona. Para rugas profundas, procedimentos em consultório são mais efetivos.'
+      },
+      {
+        p: 'Devo fazer procedimentos se tenho rugas?',
+        r: 'Depende da profundidade. Rugas leves respondem bem ao skincare consistente. Rugas profundas (dinâmicas muito marcadas) pedem procedimentos como botox ou microagulhamento. Combinação é o ideal.'
+      },
+      {
+        p: 'Posso parar de usar retinol?',
+        r: 'Sim, mas a pele volta a envelhecer. Os resultados conquistados dependem da continuidade. Se quiser pausar, diminua gradualmente e não pare abruptamente.'
       }
     ],
     seo: {
@@ -696,17 +939,65 @@ export const ARTIGOS: Artigo[] = [
       },
       {
         tipo: 'h2',
-        texto: 'Prevenção com Skincare'
+        texto: 'Prevenção e Tratamento com Skincare'
       },
       {
-        tipo: 'lista',
-        itens: [
-          'Protetor solar diário: bloqueia fotoenvelhecimento (causa 80% das rugas)',
-          'Retinol: estimula colágeno, reduz rugas micro',
-          'Vitamina C: antioxidante, protege DNA celular',
-          'Hidratação profunda: pele bem hidratada envelhece mais lentamente',
-          'Antioxidantes: neutralizam radicais livres',
-          'Ácidos suaves: renovam célula, mantêm textura firme'
+        tipo: 'p',
+        texto: 'Rugas finas e dinâmicas respondem bem ao skincare bem estruturado. O foco é estimular colágeno, proteger do sol e hidratar.'
+      },
+      {
+        tipo: 'produtos',
+        produtos: [
+          {
+            nome: 'Sérum RN-0,3 30ml',
+            marca: 'Principia',
+            faixa: 'acessível',
+            porque: 'Retinol 0,3% — estimula colágeno e reduz rugas finas. Perfeito para começar sem irritar.',
+            href: 'https://s.shopee.com.br/70JeOn2NSB',
+            selo: 'Começa aqui'
+          },
+          {
+            nome: 'Creme Ác. Glicólico 10% + Niacinamida 30g',
+            marca: 'Creamy',
+            faixa: 'acessível',
+            porque: 'Ácido glicólico suave + niacinamida que suaviza rugas por renovação celular e firmeza.',
+            href: 'https://s.shopee.com.br/9V0zNPee80'
+          },
+          {
+            nome: 'Sérum Antissinais Retinol 0,3% 30ml',
+            marca: 'Sallve',
+            faixa: 'intermediário',
+            porque: 'Retinol com ativos complementares que reduzem rugas sem o ressecamento extremo.',
+            href: 'https://s.shopee.com.br/3g3CQmlR9W'
+          },
+          {
+            nome: 'Liftactiv Retinol Specialist',
+            marca: 'Vichy',
+            faixa: 'intermediário',
+            porque: 'Retinol + água termal + cafeína. Reduz rugas e tensiona levemente. Textura que não resseca.',
+            href: 'https://s.shopee.com.br/6q0ECmQXQ2'
+          },
+          {
+            nome: 'Isdinceutics Retinal Intense',
+            marca: 'Isdin',
+            faixa: 'investimento',
+            porque: 'Retinaldehído (forma mais potente de retinol). Para quem quer máxima potência em redução de rugas.',
+            href: 'https://s.shopee.com.br/2BEOeEYhEW'
+          },
+          {
+            nome: 'BioRetinol Absolute',
+            marca: 'Ada Tina',
+            faixa: 'investimento',
+            porque: 'Retinol em forma inovadora com máxima atividade. Para rugas estabelecidas que pedem potência.',
+            href: 'https://s.shopee.com.br/9AO8z7gm2I'
+          },
+          {
+            nome: 'CICA B12+ Multirreparador',
+            marca: 'Ada Tina',
+            faixa: 'intermediário',
+            porque: 'B12 + centella que repara barreira enquanto trata rugas. Excelente para pele reativa que envelhece.',
+            href: 'https://s.shopee.com.br/6VNNoEdK0m'
+          }
         ]
       },
       {
@@ -728,16 +1019,28 @@ export const ARTIGOS: Artigo[] = [
     ],
     faq: [
       {
+        p: 'Como tirar linhas de expressão naturalmente?',
+        r: 'Protetor solar FPS 50+ diário é essencial (previne piorar). Retinol, vitamina C e hidratação reduzem linhas finas. Rugas profundas precisam de procedimentos para melhor resultado.'
+      },
+      {
+        p: 'Qual produto é bom para suavizar rugas?',
+        r: 'Retinol é o ativo comprovado mais eficaz. Comece com 0,3% e use à noite, 3-4x na semana. Demora 8-12 semanas para ver diferença. Vitamina C pela manhã potencializa o resultado.'
+      },
+      {
+        p: 'Retinol é bom mesmo para rugas?',
+        r: 'Sim, é comprovado por décadas de pesquisa. Estimula colágeno e acelera renovação. Começar baixo (0,3%) evita irritação. Resultado gradual mas consistente.'
+      },
+      {
         p: 'Aos 25 anos já preciso de retinol?',
-        r: 'Não é obrigatório, mas se você quer prevenir rugas prematuras e já tem exposição solar frequente, retinol é excelente. Prevenção é sempre melhor que correção depois.'
+        r: 'Não é obrigatório, mas prevenção é melhor que correção. Se tem exposição solar frequente, começa em concentração baixa para prevenir.'
       },
       {
-        p: 'Botox vai deixar meu rosto parado?',
-        r: 'Não quando feito com planejamento. A dose é calculada por músculo, respeitando a sua anatomia. Você continua com expressão - a ruga simplesmente fica menos marcada.'
+        p: 'Botox deixa o rosto parado e artificial?',
+        r: 'Não quando feito com bom planejamento. A dose respeita sua anatomia — você continua com expressão, a ruga apenas fica menos marcada.'
       },
       {
-        p: 'Qual procedimento escolher para rugas?',
-        r: 'Depende de quanto colágeno você ainda tem (bioestimulador) vs. quanto movimento você quer reduzir (botox). Muitas vezes a combinação funciona melhor. Isso é avaliado na consulta.'
+        p: 'Vale começar botox cedo como prevenção?',
+        r: 'Depende. Se rugas já aparecem em repouso, pode fazer sentido. Se são só dinâmicas (aparecem ao fazer expressão), skincare + protetor solar bastam por mais tempo.'
       }
     ],
     seo: {
@@ -785,14 +1088,69 @@ export const ARTIGOS: Artigo[] = [
         texto: 'Rotina Gentil e Restauradora'
       },
       {
-        tipo: 'lista',
-        itens: [
-          'Limpeza ultra-suave (água morna, sem sabão agressivo)',
-          'Tônico hidratante (não esfoliante)',
-          'Sérum calmante com ceramidas ou ácido hialurônico',
-          'Hidratante restaurador com lipídeos',
-          'Protetor solar mineral (menos irritante que químico)',
-          'Evitar: esfoliantes, ácidos fortes, perfumação'
+        tipo: 'p',
+        texto: 'Pele sensível precisa de menos etapas, não de marcas "especiais" caras. O que funciona é clareza de ingredientes, ausência de irritantes e consistência na aplicação.'
+      },
+      {
+        tipo: 'produtos',
+        produtos: [
+          {
+            nome: 'Sensibio H2O Solução Micelar',
+            marca: 'Bioderma',
+            faixa: 'intermediário',
+            porque: 'Limpeza sem sabão, específica para sensível. Remove maquiagem e sujeira sem deixar resíduo irritante.',
+            href: 'https://s.shopee.com.br/4LItEOHOpK',
+            selo: 'Começa aqui'
+          },
+          {
+            nome: 'Calming Cream Hypskin + Vitamina E 40g',
+            marca: 'Creamy',
+            faixa: 'acessível',
+            porque: 'Creme calmante com centella asiática que reduz vermelhidão. Texto leve mas reconfortante para pele reativa.',
+            href: 'https://s.shopee.com.br/7Ad4bUIVxb'
+          },
+          {
+            nome: 'Cicaplast Baume B5+ 40ml',
+            marca: 'La Roche-Posay',
+            faixa: 'intermediário',
+            porque: 'Bálsamo restaurador para pele muito irritada ou reativa. Panthenol + água termal que acalma profundamente.',
+            href: 'https://s.shopee.com.br/AAGgB0tDRA'
+          },
+          {
+            nome: 'Tolérance Control Creme Calmante 40ml',
+            marca: 'Avène',
+            faixa: 'intermediário',
+            porque: 'Formulado para pele com rosácea ou reatividade frequente. Restaura barreira sem ingredientes agressivos.',
+            href: 'https://s.shopee.com.br/9KhZBbokyf'
+          },
+          {
+            nome: 'Toleriane Sensitive Creme',
+            marca: 'La Roche-Posay',
+            faixa: 'intermediário',
+            porque: 'Creme restaurador com niacinamida e ceramidas. Para pele extremamente sensível que reage frequentemente.',
+            href: 'https://s.shopee.com.br/6q0ED26fai'
+          },
+          {
+            nome: 'Sérum Calmante Antirreatividade 30ml',
+            marca: 'Ada Tina',
+            faixa: 'intermediário',
+            porque: 'Sérum que reduz inflamação e irritação. Base perfeita antes do hidratante em pele muito reativa.',
+            href: 'https://s.shopee.com.br/7Ad4berw1k'
+          },
+          {
+            nome: 'B12 Ultra Reparador',
+            marca: 'Ada Tina',
+            faixa: 'intermediário',
+            porque: 'B12 que restaura e acalma. Excelente para pele que se irrita facilmente com ingredientes.',
+            href: 'https://s.shopee.com.br/7Ad4berw1k'
+          },
+          {
+            nome: 'Azelabio',
+            marca: 'Ada Tina',
+            faixa: 'intermediário',
+            porque: 'Ácido azeláico gentil para pele sensível com rosácea ou acne leve. Reduz vermelhidão sem irritar.',
+            href: 'https://s.shopee.com.br/3g3CREiigR'
+          }
         ]
       },
       {
@@ -821,16 +1179,28 @@ export const ARTIGOS: Artigo[] = [
     ],
     faq: [
       {
+        p: 'Que tipo de skincare é bom para pele sensível?',
+        r: 'Procure por: sem fragrância, sem álcool, com ceramidas, centella asiática, niacinamida e ácido hialurônico. Marcas como Bioderma, La Roche-Posay, Creamy e Avène são seguras para sensível.'
+      },
+      {
+        p: 'Qual é o melhor produto para pele sensível que fica vermelha?',
+        r: 'Procure por séruns ou cremes com centella asiática, panthenol e niacinamida. Evite vitam C pura, retinol forte e ácidos concentrados. Comece com um produto calmante, não estimulante.'
+      },
+      {
         p: 'Posso usar retinol em pele sensível?',
-        r: 'Sim, mas começando com retinol muito suave (0.03%) e aplicando apenas 2x semana, aumentando gradualmente. A paciência é essencial - pele sensível precisa de adaptação lenta.'
+        r: 'Sim, mas apenas retinol muito suave (0.03%) aplicado 1-2x semana. Aumentar gradualmente após 4-6 semanas. Pele sensível precisa de tempo para adaptação.'
       },
       {
-        p: 'Qual é o melhor protetor para pele sensível?',
-        r: 'Protetores minerais (com óxido de zinco ou dióxido de titânio) costumam ser melhor tolerados. Alguns químicos irritam, mas nem todos - é questão de testar com cuidado.'
+        p: 'Qual protetor solar é bom para pele sensível?',
+        r: 'Protetores minerais (óxido de zinco ou dióxido de titânio) são geralmente melhor tolerados. Alguns químicos podem irritar, então teste sempre em pequena área primeiro.'
       },
       {
-        p: 'Quanto tempo para a barreira se recuperar?',
-        r: 'De 2-4 semanas, dependendo de quanto foi danificada. O importante é parar com produtos irritantes IMEDIATAMENTE e usar apenas hidratantes restauradores enquanto se recupera.'
+        p: 'Quanto tempo leva para barreira de proteção se recuperar?',
+        r: '2-4 semanas se você parar com agressores e usar só hidratantes restauradores. O importante é não trocar de produto nesse período - deixa agir.'
+      },
+      {
+        p: 'Minha pele piora com alguns produtos — o que faço?',
+        r: 'Pare imediatamente o produto suspeito. Use apenas água morna, limpeza ultra-suave e um hidratante restaurador nos próximos dias. Se não melhorar em 1 semana, procure dermatologista.'
       }
     ],
     seo: {
