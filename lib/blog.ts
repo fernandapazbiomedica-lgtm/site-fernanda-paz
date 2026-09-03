@@ -37,6 +37,11 @@ export const ARTIGOS: Artigo[] = [
         texto:
           'É a pergunta que mais aparece na consulta, e ela vem de um lugar legítimo: todo mundo já viu um rosto que parece parado. O que quase ninguém sabe é que esse resultado não vem da toxina botulínica em si: vem de como ela foi usada.',
       },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/pele-madura.jpg',
+        alt: 'Expressão facial natural: resultado correto do botox'
+      },
       { tipo: 'h2', texto: 'O que a toxina realmente faz' },
       {
         tipo: 'p',
@@ -74,6 +79,11 @@ export const ARTIGOS: Artigo[] = [
         texto:
           'O efeito é temporário. Isso funciona como uma proteção: mesmo em um resultado que não agradou, ele se desfaz com o tempo. E o retorno de avaliação existe justamente para ajustar o que for necessário dentro da janela adequada.',
       },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/rugas-pescoco.jpg',
+        alt: 'Rugas de expressão: o que o planejamento correto previne'
+      },
     ],
     faq: [
       {
@@ -108,6 +118,11 @@ export const ARTIGOS: Artigo[] = [
         tipo: 'p',
         texto:
           'Melasma é uma das condições mais frustrantes de tratar, não porque não responda, mas porque volta com facilidade quando os gatilhos continuam ativos. E muitos desses gatilhos passam despercebidos na rotina.',
+      },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/melasma.jpg',
+        alt: 'Melasma: manchas causadas por ativação do melanócito'
       },
       { tipo: 'h2', texto: 'Sol: o óbvio que ainda é subestimado' },
       {
@@ -175,6 +190,11 @@ export const ARTIGOS: Artigo[] = [
         texto:
           'É comum chegar na consulta pedindo "aquele procedimento do tanquinho" e descobrir que existem dois caminhos diferentes, e que escolher o errado significa não alcançar o resultado esperado.',
       },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/definicao-abdominal.jpg',
+        alt: 'Definição abdominal: musculatura já existente evidenciada'
+      },
       { tipo: 'h2', texto: 'Definição abdominal' },
       {
         tipo: 'p',
@@ -202,6 +222,11 @@ export const ARTIGOS: Artigo[] = [
         tipo: 'p',
         texto:
           'Essa distinção é feita na avaliação presencial, e não pela foto ou pela descrição do que você quer. É exatamente por isso que a consulta vem antes.',
+      },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/tonificacao-corporal.jpg',
+        alt: 'Tonificação corporal: resultado de definição abdominal bem executada'
       },
     ],
     faq: [
@@ -428,6 +453,11 @@ export const ARTIGOS: Artigo[] = [
         texto: 'Melasma é manchas simétricas marrom-acinzentadas que aparecem principalmente no rosto. É mais comum em mulheres e em peles morenas/escuras, apesar de poder ocorrer em qualquer fototipo.'
       },
       {
+        tipo: 'imagem',
+        src: '/images/blog-content/melasma.jpg',
+        alt: 'Melasma: manchas simétricas que exigem proteção contínua'
+      },
+      {
         tipo: 'destaque',
         texto: 'Melasma é uma condição crônica: se controla, não se cura. O foco é clarear ao máximo e depois manter os resultados.'
       },
@@ -571,6 +601,11 @@ export const ARTIGOS: Artigo[] = [
         texto: 'Pele seca ocorre quando há falta de água nas camadas superficiais da pele, ou quando a barreira protetora (camada lipídica) está comprometida. Isso pode ser genético, ambiental ou pelo uso de produtos inadequados.'
       },
       {
+        tipo: 'imagem',
+        src: '/images/blog-content/pele-seca.jpg',
+        alt: 'Pele seca: ressecamento e falta de hidratação'
+      },
+      {
         tipo: 'destaque',
         texto: 'Pele seca não é só falta de hidratante - é falta de água NA pele e falta de óleos que a mantêm selada.'
       },
@@ -596,6 +631,11 @@ export const ARTIGOS: Artigo[] = [
       {
         tipo: 'p',
         texto: 'A rotina para pele seca deve focar em camadas de hidratação — hidrolato, sérum, creme e selante. Não pule etapas e escolha um produto por categoria.'
+      },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/pele-sensivel.jpg',
+        alt: 'Pele sensível ressecada: necessidade de hidratação profunda'
       },
       {
         tipo: 'h2',
@@ -771,6 +811,11 @@ export const ARTIGOS: Artigo[] = [
         texto: 'A pele madura enfrenta diminuição de colágeno, elastina, ácido hialurônico e renovação celular. Resultado: rugas, flacidez, perda de brilho e textura mais áspera.'
       },
       {
+        tipo: 'imagem',
+        src: '/images/blog-content/pele-madura.jpg',
+        alt: 'Pele madura: sinais de envelhecimento naturais'
+      },
+      {
         tipo: 'destaque',
         texto: 'O envelhecimento é natural, mas seu ritmo pode ser controlado com proteção solar e ativos específicos desde cedo.'
       },
@@ -894,12 +939,22 @@ export const ARTIGOS: Artigo[] = [
         texto: 'Procedimentos que Funcionam para Pele Madura'
       },
       {
+        tipo: 'imagem',
+        src: '/images/blog-content/rugas-pescoco.jpg',
+        alt: 'Rugas de pescoço: indicação para bioestimuladores e tratamentos'
+      },
+      {
         tipo: 'p',
         texto: 'Botox, bioestimulador, skinbooster, microagulhamento e fios de sustentação são excelentes para pele madura. Cada um trabalha diferente: toxina reduz rugas de expressão, bioestimulador restaura colágeno, fios sustentam flacidez.'
       },
       {
         tipo: 'destaque',
         texto: 'A combinação de um bom skincare + procedimentos em consultório é o máximo que pode ser alcançado em termos de rejuvenescimento.'
+      },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/pele-sensivel.jpg',
+        alt: 'Pele madura com flacidez: necessidade de estimulação de colágeno'
       }
     ],
     faq: [
@@ -948,6 +1003,11 @@ export const ARTIGOS: Artigo[] = [
       {
         tipo: 'p',
         texto: 'Rugas dinâmicas aparecem quando expressamos (testa, entre as sobrancelhas, ao redor dos olhos). Rugas estáticas ficam visíveis mesmo com o rosto em repouso - já deixaram sua marca na pele.'
+      },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/pele-madura.jpg',
+        alt: 'Rugas estáticas: marcas que já ficaram fixas na pele'
       },
       {
         tipo: 'destaque',
@@ -1025,6 +1085,11 @@ export const ARTIGOS: Artigo[] = [
         texto: 'Se a linha de expressão já fica visível em repouso, procedimentos em consultório trabalham mais profundamente. Botox reduz rugas dinâmicas, bioestimulador restaura colágeno perdido, fios de sustentação elevam áreas caídas.'
       },
       {
+        tipo: 'imagem',
+        src: '/images/blog-content/rugas-pescoco.jpg',
+        alt: 'Rugas de pescoço: resultado de exposição solar crônica'
+      },
+      {
         tipo: 'h2',
         texto: 'Expectativas Realistas'
       },
@@ -1079,6 +1144,11 @@ export const ARTIGOS: Artigo[] = [
       {
         tipo: 'p',
         texto: 'Pele sensível reage com rapidez a produtos, clima, stress ou até toque. Fica vermelha, queimando, com coceira ou irritação facilmente. Geralmente tem barreira de proteção comprometida.'
+      },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/pele-sensivel.jpg',
+        alt: 'Pele sensível e reativa: barreira comprometida'
       },
       {
         tipo: 'destaque',
@@ -1191,6 +1261,11 @@ export const ARTIGOS: Artigo[] = [
       {
         tipo: 'p',
         texto: 'Skinbooster é excelente para pele sensível - hidrata profundamente sem agressão. Procedimentos muito intensos devem ser evitados. Sempre com profissional que entenda sensibilidade.'
+      },
+      {
+        tipo: 'imagem',
+        src: '/images/blog-content/pele-seca.jpg',
+        alt: 'Pele seca e sensível: necessidade de hidratação calmante'
       }
     ],
     faq: [
