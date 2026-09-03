@@ -209,9 +209,9 @@ const quizEspelho: QuizData = {
 };
 
 export default function QuizzesEstrategicos() {
-  const [selectedQuiz, setSelectedQuiz] = useState(null);
+  const [selectedQuiz, setSelectedQuiz] = useState<QuizType | null>(null);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
-  const [selectedAnswers, setSelectedAnswers] = useState([]);
+  const [selectedAnswers, setSelectedAnswers] = useState<string[]>([]);
   const [showResult, setShowResult] = useState(false);
 
   const quizzes = {
@@ -227,7 +227,7 @@ export default function QuizzesEstrategicos() {
   const currentQuiz = selectedQuiz ? quizzes[selectedQuiz] : null;
   const currentQuestion = currentQuiz ? currentQuiz.questions[currentQuestionIndex] : null;
 
-  const handleSelectAnswer = (optionId) => {
+  const handleSelectAnswer = (optionId: string) => {
     if (currentQuestion?.multiple) {
       setSelectedAnswers((prev) =>
         prev.includes(optionId) ? prev.filter((id) => id !== optionId) : [...prev, optionId]
@@ -289,7 +289,7 @@ export default function QuizzesEstrategicos() {
     );
   }
 
-  if (!showResult && currentQuestion) {
+  if (!showResult && currentQuestion && currentQuiz) {
     const progress = ((currentQuestionIndex + 1) / currentQuiz.questions.length) * 100;
 
     return (
@@ -316,7 +316,7 @@ export default function QuizzesEstrategicos() {
           <h2 className="display text-d3 mb-8">{currentQuestion.text}</h2>
 
           <div className="space-y-3 mb-12">
-            {currentQuestion.options.map((option) => (
+            {currentQuestion.options.map((option: QuizOption) => (
               <label
                 key={option.id}
                 className="flex items-center p-4 border border-linha rounded-lg cursor-pointer hover:bg-papel transition"
@@ -375,7 +375,7 @@ export default function QuizzesEstrategicos() {
           <div className="bg-papel rounded-lg p-8 mb-12">
             <h3 className="eyebrow mb-4">Possibilidades que fazem sentido para você:</h3>
             <ul className="space-y-3">
-              {result.recommendations.map((rec, idx) => (
+              {result.recommendations.map((rec: string, idx: number) => (
                 <li key={idx} className="flex items-start">
                   <span className="mr-3">→</span>
                   <span className="corpo">{rec}</span>

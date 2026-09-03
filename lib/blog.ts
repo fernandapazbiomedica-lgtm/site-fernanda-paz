@@ -5,6 +5,7 @@ export type Artigo = {
   resumo: string;
   leitura: string;
   data: string;
+  imagem?: string;
   /** conteúdo em blocos. PENDENTE de revisão clínica da Dra. */
   corpo: ({ tipo: 'p' | 'h2' | 'destaque' | 'lista'; texto?: string; itens?: string[] } | {
     tipo: 'produtos';
@@ -13,7 +14,7 @@ export type Artigo = {
       marca: string;
       faixa: 'acessível' | 'intermediário' | 'investimento';
       porque: string;
-      href: string;
+      href?: string;
       selo?: string;
     }>;
   })[];
@@ -582,7 +583,7 @@ export const ARTIGOS: Artigo[] = [
         texto: 'A rotina para pele seca deve focar em camadas de hidratação — hidrolato, sérum, creme e selante. Não pule etapas e escolha um produto por categoria.'
       },
       {
-        tipo: 'h3',
+        tipo: 'h2',
         texto: 'Etapa 1 · Limpeza Suave'
       },
       {
@@ -610,7 +611,7 @@ export const ARTIGOS: Artigo[] = [
         ]
       },
       {
-        tipo: 'h3',
+        tipo: 'h2',
         texto: 'Etapa 2 · Hidratação Intensiva'
       },
       {
@@ -638,7 +639,7 @@ export const ARTIGOS: Artigo[] = [
         ]
       },
       {
-        tipo: 'h3',
+        tipo: 'h2',
         texto: 'Etapa 3 · Creme Hidratante Rico'
       },
       {
@@ -782,7 +783,7 @@ export const ARTIGOS: Artigo[] = [
         texto: 'A rotina anti-age combina hidratação profunda, ativos que estimulam colágeno (retinol, vitamina C, peptídeos) e proteção solar rigorosa. Cada etapa é essencial.'
       },
       {
-        tipo: 'h3',
+        tipo: 'h2',
         texto: 'Manhã: Proteção e Antioxidantes'
       },
       {
@@ -806,7 +807,7 @@ export const ARTIGOS: Artigo[] = [
         ]
       },
       {
-        tipo: 'h3',
+        tipo: 'h2',
         texto: 'Noite: Estimulação de Colágeno'
       },
       {
@@ -858,7 +859,7 @@ export const ARTIGOS: Artigo[] = [
         ]
       },
       {
-        tipo: 'h3',
+        tipo: 'h2',
         texto: 'Hidratação Anti-Idade'
       },
       {
