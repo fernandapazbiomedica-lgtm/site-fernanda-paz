@@ -31,6 +31,7 @@ export const ARTIGOS: Artigo[] = [
       'A resposta curta é não, e a resposta longa explica exatamente por que algumas pessoas ficam com essa aparência.',
     leitura: '4 min',
     data: '2026-08-21',
+    imagem: '/images/blog/botox.jpg',
     corpo: [
       {
         tipo: 'p',
@@ -113,6 +114,7 @@ export const ARTIGOS: Artigo[] = [
       'Sol é o vilão conhecido. Mas calor, luz de tela e alguns procedimentos comuns também entram na lista.',
     leitura: '5 min',
     data: '2026-08-14',
+    imagem: '/images/blog/melasma.jpg',
     corpo: [
       {
         tipo: 'p',
@@ -184,6 +186,7 @@ export const ARTIGOS: Artigo[] = [
       'Os nomes são parecidos, o resultado esperado é parecido, mas as indicações são quase opostas.',
     leitura: '4 min',
     data: '2026-08-07',
+    imagem: '/images/blog/abdominal.jpg',
     corpo: [
       {
         tipo: 'p',
@@ -252,6 +255,7 @@ export const ARTIGOS: Artigo[] = [
     resumo: 'Como montar a rotina em quatro etapas, com opções em faixas de investimento diferentes — e o que procurar em cada passo.',
     leitura: '9 min',
     data: '2026-08-27',
+    imagem: '/images/blog/treino.jpg',
     corpo: [
       {
         tipo: 'p',
@@ -443,6 +447,7 @@ export const ARTIGOS: Artigo[] = [
     resumo: 'Guia sobre causas, gatilhos, rotina de proteção e procedimentos eficazes para manchas',
     leitura: '7 min',
     data: '2026-08-27',
+    imagem: '/images/blog/praia.jpg',
     corpo: [
       {
         tipo: 'h2',
@@ -591,6 +596,7 @@ export const ARTIGOS: Artigo[] = [
     resumo: 'Como hidratar e restaurar a barreira de proteção de pele ressecada',
     leitura: '6 min',
     data: '2026-08-27',
+    imagem: '/images/blog/pos-48h.jpg',
     corpo: [
       {
         tipo: 'h2',
@@ -801,6 +807,7 @@ export const ARTIGOS: Artigo[] = [
     resumo: 'Guia de cuidados, ativos anti-envelhecimento e procedimentos para pele madura',
     leitura: '8 min',
     data: '2026-08-27',
+    imagem: '/images/blog/capilar.jpg',
     corpo: [
       {
         tipo: 'h2',
@@ -995,6 +1002,7 @@ export const ARTIGOS: Artigo[] = [
     resumo: 'Prevenção, ativos skincare e procedimentos eficazes para rugas',
     leitura: '7 min',
     data: '2026-08-27',
+    imagem: '/images/blog/bioestimulador.jpg',
     corpo: [
       {
         tipo: 'h2',
@@ -1136,6 +1144,7 @@ export const ARTIGOS: Artigo[] = [
     resumo: 'Como cuidar de pele que reage com facilidade e construir tolerância',
     leitura: '6 min',
     data: '2026-08-27',
+    imagem: '/images/blog/verao.jpg',
     corpo: [
       {
         tipo: 'h2',

@@ -92,17 +92,16 @@ export default async function ArtigoPage({ params }: Props) {
           </div>
         </header>
 
-        <Foto
-          src={
-            a.categoria === 'Facial' ? '/images/cat-facial.jpg'
-            : a.categoria === 'Corporal' ? '/images/cat-corporal.jpg'
-            : a.categoria === 'Capilar' ? '/images/cat-capilar.jpg'
-            : '/images/cat-pele.jpg'
-          }
-          alt={a.titulo}
-          className="h-[220px] md:h-[300px] w-full"
-          prioridade
-        />
+        {a.imagem && (
+          <div className="wrap">
+            <Foto
+              src={a.imagem}
+              alt={a.titulo}
+              className="aspect-[4/5] w-full max-w-[480px] rounded-lg"
+              prioridade
+            />
+          </div>
+        )}
 
         <div className="wrap py-16 md:py-20">
           <div className="grid lg:grid-cols-[1fr_0.42fr] gap-12 lg:gap-20">
